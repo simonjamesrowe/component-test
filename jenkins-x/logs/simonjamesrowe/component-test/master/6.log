@@ -1,0 +1,153 @@
+
+Showing logs for build [32msimonjamesrowe-component-test-m-c7m2l-6[0m stage [32mfrom-build-pack[0m and container [32mcredential-initializer[0m
+{"level":"info","ts":1608938921.5219774,"caller":"creds-init/main.go:44","msg":"Credentials initialized."}
+
+Showing logs for build [32msimonjamesrowe-component-test-m-c7m2l-6[0m stage [32mfrom-build-pack[0m and container [32mworking-dir-initializer[0m
+
+Showing logs for build [32msimonjamesrowe-component-test-m-c7m2l-6[0m stage [32mfrom-build-pack[0m and container [32mplace-tools[0m
+
+Showing logs for build [32msimonjamesrowe-component-test-m-c7m2l-6[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-simonjamesrowe-component-test-m-c7m2l-fqzkb[0m
+{"level":"info","ts":1608938928.662977,"caller":"git/git.go:105","msg":"Successfully cloned https://github.com/simonjamesrowe/component-test.git @ v0.0.2 in path /workspace/source"}
+{"level":"warn","ts":1608938928.6631122,"caller":"git/git.go:152","msg":"Unexpected error: creating symlink: symlink /tekton/home/.ssh /****/.ssh: file exists"}
+{"level":"info","ts":1608938928.7132926,"caller":"git/git.go:133","msg":"Successfully initialized and updated submodules in path /workspace/source"}
+
+Showing logs for build [32msimonjamesrowe-component-test-m-c7m2l-6[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-builder-home[0m
+
+Showing logs for build [32msimonjamesrowe-component-test-m-c7m2l-6[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32msimonjamesrowe-component-test-m-c7m2l-6[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Generated Git credentials file /workspace/xdg_config/git/credentials
+
+Showing logs for build [32msimonjamesrowe-component-test-m-c7m2l-6[0m stage [32mfrom-build-pack[0m and container [32mstep-build-gradle-build[0m
+Picked up _JAVA_OPTIONS: -XX:+UnlockExperimentalVMOptions -XX:+UseCGroupMemoryLimitForHeap -Dsun.zip.disableMemoryMapping=true -XX:+UseParallelGC -XX:MinHeapFreeRatio=5 -XX:MaxHeapFreeRatio=10 -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Xms10m -Xmx192m
+OpenJDK 64-Bit Server VM warning: If the number of processors is expected to increase from one, then you should configure the number of parallel GC threads appropriately using -XX:ParallelGCThreads=N
+Starting a Gradle Daemon (subsequent builds will be faster)
+Generating JAR file 'gradle-api-4.6.jar'
+Generating JAR file 'gradle-kotlin-dsl-extensions-0.15.6-4.6.jar'
+Download https://plugins.gradle.org/m2/org/springframework/boot/org.springframework.boot.gradle.plugin/2.3.7.RELEASE/org.springframework.boot.gradle.plugin-2.3.7.RELEASE.pom
+Download https://plugins.gradle.org/m2/io/spring/dependency-management/io.spring.dependency-management.gradle.plugin/1.0.10.RELEASE/io.spring.dependency-management.gradle.plugin-1.0.10.RELEASE.pom
+Download https://plugins.gradle.org/m2/org/jetbrains/kotlin/jvm/org.jetbrains.kotlin.jvm.gradle.plugin/1.3.72/org.jetbrains.kotlin.jvm.gradle.plugin-1.3.72.pom
+Download https://plugins.gradle.org/m2/org/jetbrains/kotlin/plugin/spring/org.jetbrains.kotlin.plugin.spring.gradle.plugin/1.3.72/org.jetbrains.kotlin.plugin.spring.gradle.plugin-1.3.72.pom
+Download https://plugins.gradle.org/m2/org/springframework/boot/spring-boot-gradle-plugin/2.3.7.RELEASE/spring-boot-gradle-plugin-2.3.7.RELEASE.pom
+Download https://plugins.gradle.org/m2/io/spring/gradle/dependency-management-plugin/1.0.10.RELEASE/dependency-management-plugin-1.0.10.RELEASE.pom
+Download https://plugins.gradle.org/m2/org/jetbrains/kotlin/kotlin-gradle-plugin/1.3.72/kotlin-gradle-plugin-1.3.72.pom
+Download https://plugins.gradle.org/m2/org/jetbrains/kotlin/kotlin-allopen/1.3.72/kotlin-allopen-1.3.72.pom
+Download https://plugins.gradle.org/m2/org/springframework/boot/spring-boot-buildpack-platform/2.3.7.RELEASE/spring-boot-buildpack-platform-2.3.7.RELEASE.pom
+Download https://plugins.gradle.org/m2/org/apache/commons/commons-compress/1.19/commons-compress-1.19.pom
+Download https://plugins.gradle.org/m2/org/apache/commons/commons-parent/48/commons-parent-48.pom
+Download https://plugins.gradle.org/m2/org/apache/apache/21/apache-21.pom
+Download https://plugins.gradle.org/m2/org/springframework/spring-core/5.2.12.RELEASE/spring-core-5.2.12.RELEASE.pom
+Download https://plugins.gradle.org/m2/org/springframework/boot/spring-boot-loader-tools/2.3.7.RELEASE/spring-boot-loader-tools-2.3.7.RELEASE.pom
+Download https://plugins.gradle.org/m2/org/jetbrains/kotlin/kotlin-compiler-embeddable/1.3.72/kotlin-compiler-embeddable-1.3.72.pom
+Download https://plugins.gradle.org/m2/org/jetbrains/kotlin/kotlin-android-extensions/1.3.72/kotlin-android-extensions-1.3.72.pom
+Download https://plugins.gradle.org/m2/org/jetbrains/kotlin/kotlin-compiler-runner/1.3.72/kotlin-compiler-runner-1.3.72.pom
+Download https://plugins.gradle.org/m2/org/jetbrains/kotlin/kotlin-scripting-compiler-embeddable/1.3.72/kotlin-scripting-compiler-embeddable-1.3.72.pom
+Download https://plugins.gradle.org/m2/org/jetbrains/kotlin/kotlin-scripting-compiler-impl-embeddable/1.3.72/kotlin-scripting-compiler-impl-embeddable-1.3.72.pom
+Download https://plugins.gradle.org/m2/org/jetbrains/kotlin/kotlin-reflect/1.2.21/kotlin-reflect-1.2.21.pom
+Download https://plugins.gradle.org/m2/org/jetbrains/kotlin/kotlin-gradle-plugin-api/1.3.72/kotlin-gradle-plugin-api-1.3.72.pom
+Download https://plugins.gradle.org/m2/org/jetbrains/kotlin/kotlin-gradle-plugin-model/1.3.72/kotlin-gradle-plugin-model-1.3.72.pom
+Download https://plugins.gradle.org/m2/org/jetbrains/kotlin/kotlin-stdlib/1.2.21/kotlin-stdlib-1.2.21.pom
+Download https://plugins.gradle.org/m2/org/jetbrains/kotlin/kotlin-native-utils/1.3.72/kotlin-native-utils-1.3.72.pom
+Download https://plugins.gradle.org/m2/org/jetbrains/kotlin/kotlin-util-klib/1.3.72/kotlin-util-klib-1.3.72.pom
+Download https://plugins.gradle.org/m2/com/google/code/gson/gson/2.8.5/gson-2.8.5.pom
+Download https://plugins.gradle.org/m2/com/google/code/gson/gson-parent/2.8.5/gson-parent-2.8.5.pom
+Download https://plugins.gradle.org/m2/org/sonatype/oss/oss-parent/7/oss-parent-7.pom
+Download https://plugins.gradle.org/m2/de/undercouch/gradle-download-task/4.0.2/gradle-download-task-4.0.2.pom
+Download https://plugins.gradle.org/m2/org/jetbrains/kotlin/kotlin-annotation-processing-gradle/1.3.72/kotlin-annotation-processing-gradle-1.3.72.pom
+Download https://plugins.gradle.org/m2/com/fasterxml/jackson/core/jackson-databind/2.11.3/jackson-databind-2.11.3.pom
+Download https://plugins.gradle.org/m2/com/fasterxml/jackson/jackson-base/2.11.3/jackson-base-2.11.3.pom
+Download https://plugins.gradle.org/m2/com/fasterxml/jackson/jackson-bom/2.11.3/jackson-bom-2.11.3.pom
+Download https://plugins.gradle.org/m2/com/fasterxml/jackson/jackson-parent/2.11/jackson-parent-2.11.pom
+Download https://plugins.gradle.org/m2/com/fasterxml/oss-parent/38/oss-parent-38.pom
+Download https://plugins.gradle.org/m2/net/java/dev/jna/jna-platform/5.5.0/jna-platform-5.5.0.pom
+Download https://plugins.gradle.org/m2/org/apache/httpcomponents/httpclient/4.5.13/httpclient-4.5.13.pom
+Download https://plugins.gradle.org/m2/org/apache/httpcomponents/httpcomponents-client/4.5.13/httpcomponents-client-4.5.13.pom
+Download https://plugins.gradle.org/m2/org/apache/httpcomponents/httpcomponents-parent/11/httpcomponents-parent-11.pom
+Download https://plugins.gradle.org/m2/com/fasterxml/jackson/module/jackson-module-parameter-names/2.11.3/jackson-module-parameter-names-2.11.3.pom
+Download https://plugins.gradle.org/m2/com/fasterxml/jackson/module/jackson-modules-java8/2.11.3/jackson-modules-java8-2.11.3.pom
+Download https://plugins.gradle.org/m2/org/springframework/spring-jcl/5.2.12.RELEASE/spring-jcl-5.2.12.RELEASE.pom
+Download https://plugins.gradle.org/m2/org/jetbrains/kotlin/kotlin-script-runtime/1.3.72/kotlin-script-runtime-1.3.72.pom
+Download https://plugins.gradle.org/m2/org/jetbrains/intellij/deps/trove4j/1.0.20181211/trove4j-1.0.20181211.pom
+Download https://plugins.gradle.org/m2/org/jetbrains/kotlin/kotlin-daemon-embeddable/1.3.72/kotlin-daemon-embeddable-1.3.72.pom
+Download https://plugins.gradle.org/m2/org/jetbrains/kotlin/kotlin-build-common/1.3.72/kotlin-build-common-1.3.72.pom
+Download https://plugins.gradle.org/m2/org/jetbrains/kotlinx/kotlinx-coroutines-core/1.2.1/kotlinx-coroutines-core-1.2.1.pom
+Download https://plugins.gradle.org/m2/org/jetbrains/kotlin/kotlin-daemon-client/1.3.72/kotlin-daemon-client-1.3.72.pom
+Download https://plugins.gradle.org/m2/org/jetbrains/kotlin/kotlin-scripting-common/1.3.72/kotlin-scripting-common-1.3.72.pom
+Download https://plugins.gradle.org/m2/org/jetbrains/kotlin/kotlin-scripting-jvm/1.3.72/kotlin-scripting-jvm-1.3.72.pom
+Download https://plugins.gradle.org/m2/org/jetbrains/annotations/13.0/annotations-13.0.pom
+Download https://plugins.gradle.org/m2/org/jetbrains/kotlin/kotlin-util-io/1.3.72/kotlin-util-io-1.3.72.pom
+Download https://plugins.gradle.org/m2/com/fasterxml/jackson/core/jackson-annotations/2.11.3/jackson-annotations-2.11.3.pom
+Download https://plugins.gradle.org/m2/com/fasterxml/jackson/core/jackson-core/2.11.3/jackson-core-2.11.3.pom
+Download https://plugins.gradle.org/m2/net/java/dev/jna/jna/5.5.0/jna-5.5.0.pom
+Download https://plugins.gradle.org/m2/org/apache/httpcomponents/httpcore/4.4.13/httpcore-4.4.13.pom
+Download https://plugins.gradle.org/m2/org/apache/httpcomponents/httpcomponents-core/4.4.13/httpcomponents-core-4.4.13.pom
+Download https://plugins.gradle.org/m2/commons-codec/commons-codec/1.11/commons-codec-1.11.pom
+Download https://plugins.gradle.org/m2/org/apache/commons/commons-parent/42/commons-parent-42.pom
+Download https://plugins.gradle.org/m2/org/apache/apache/18/apache-18.pom
+Download https://plugins.gradle.org/m2/commons-logging/commons-logging/1.2/commons-logging-1.2.pom
+Download https://plugins.gradle.org/m2/org/apache/commons/commons-parent/34/commons-parent-34.pom
+Download https://plugins.gradle.org/m2/org/apache/apache/13/apache-13.pom
+Download https://plugins.gradle.org/m2/org/springframework/boot/spring-boot-gradle-plugin/2.3.7.RELEASE/spring-boot-gradle-plugin-2.3.7.RELEASE.jar
+Download https://plugins.gradle.org/m2/org/jetbrains/kotlin/kotlin-gradle-plugin/1.3.72/kotlin-gradle-plugin-1.3.72.jar
+Download https://plugins.gradle.org/m2/org/jetbrains/kotlin/kotlin-allopen/1.3.72/kotlin-allopen-1.3.72.jar
+Download https://plugins.gradle.org/m2/org/springframework/boot/spring-boot-buildpack-platform/2.3.7.RELEASE/spring-boot-buildpack-platform-2.3.7.RELEASE.jar
+Download https://plugins.gradle.org/m2/org/springframework/boot/spring-boot-loader-tools/2.3.7.RELEASE/spring-boot-loader-tools-2.3.7.RELEASE.jar
+Download https://plugins.gradle.org/m2/org/apache/commons/commons-compress/1.19/commons-compress-1.19.jar
+Download https://plugins.gradle.org/m2/org/springframework/spring-core/5.2.12.RELEASE/spring-core-5.2.12.RELEASE.jar
+Download https://plugins.gradle.org/m2/org/jetbrains/kotlin/kotlin-annotation-processing-gradle/1.3.72/kotlin-annotation-processing-gradle-1.3.72.jar
+Download https://plugins.gradle.org/m2/org/jetbrains/kotlin/kotlin-android-extensions/1.3.72/kotlin-android-extensions-1.3.72.jar
+Download https://plugins.gradle.org/m2/org/jetbrains/kotlin/kotlin-compiler-embeddable/1.3.72/kotlin-compiler-embeddable-1.3.72.jar
+Download https://plugins.gradle.org/m2/org/jetbrains/kotlin/kotlin-compiler-runner/1.3.72/kotlin-compiler-runner-1.3.72.jar
+Download https://plugins.gradle.org/m2/org/jetbrains/kotlin/kotlin-scripting-compiler-embeddable/1.3.72/kotlin-scripting-compiler-embeddable-1.3.72.jar
+Download https://plugins.gradle.org/m2/org/jetbrains/kotlin/kotlin-scripting-compiler-impl-embeddable/1.3.72/kotlin-scripting-compiler-impl-embeddable-1.3.72.jar
+Download https://plugins.gradle.org/m2/org/jetbrains/kotlin/kotlin-daemon-client/1.3.72/kotlin-daemon-client-1.3.72.jar
+Download https://plugins.gradle.org/m2/org/jetbrains/kotlin/kotlin-reflect/1.2.21/kotlin-reflect-1.2.21.jar
+Download https://plugins.gradle.org/m2/org/jetbrains/kotlin/kotlin-gradle-plugin-api/1.3.72/kotlin-gradle-plugin-api-1.3.72.jar
+Download https://plugins.gradle.org/m2/org/jetbrains/kotlin/kotlin-gradle-plugin-model/1.3.72/kotlin-gradle-plugin-model-1.3.72.jar
+Download https://plugins.gradle.org/m2/org/jetbrains/kotlin/kotlin-native-utils/1.3.72/kotlin-native-utils-1.3.72.jar
+Download https://plugins.gradle.org/m2/org/jetbrains/kotlin/kotlin-util-klib/1.3.72/kotlin-util-klib-1.3.72.jar
+Download https://plugins.gradle.org/m2/org/jetbrains/kotlin/kotlin-scripting-jvm/1.3.72/kotlin-scripting-jvm-1.3.72.jar
+Download https://plugins.gradle.org/m2/org/jetbrains/kotlin/kotlin-scripting-common/1.3.72/kotlin-scripting-common-1.3.72.jar
+Download https://plugins.gradle.org/m2/org/jetbrains/kotlin/kotlin-util-io/1.3.72/kotlin-util-io-1.3.72.jar
+Download https://plugins.gradle.org/m2/org/jetbrains/kotlin/kotlin-stdlib/1.2.21/kotlin-stdlib-1.2.21.jar
+Download https://plugins.gradle.org/m2/com/google/code/gson/gson/2.8.5/gson-2.8.5.jar
+Download https://plugins.gradle.org/m2/de/undercouch/gradle-download-task/4.0.2/gradle-download-task-4.0.2.jar
+Download https://plugins.gradle.org/m2/com/fasterxml/jackson/module/jackson-module-parameter-names/2.11.3/jackson-module-parameter-names-2.11.3.jar
+Download https://plugins.gradle.org/m2/com/fasterxml/jackson/core/jackson-databind/2.11.3/jackson-databind-2.11.3.jar
+Download https://plugins.gradle.org/m2/net/java/dev/jna/jna-platform/5.5.0/jna-platform-5.5.0.jar
+Download https://plugins.gradle.org/m2/org/apache/httpcomponents/httpclient/4.5.13/httpclient-4.5.13.jar
+Download https://plugins.gradle.org/m2/org/springframework/spring-jcl/5.2.12.RELEASE/spring-jcl-5.2.12.RELEASE.jar
+Download https://plugins.gradle.org/m2/org/jetbrains/kotlin/kotlin-script-runtime/1.3.72/kotlin-script-runtime-1.3.72.jar
+Download https://plugins.gradle.org/m2/org/jetbrains/kotlin/kotlin-daemon-embeddable/1.3.72/kotlin-daemon-embeddable-1.3.72.jar
+Download https://plugins.gradle.org/m2/org/jetbrains/intellij/deps/trove4j/1.0.20181211/trove4j-1.0.20181211.jar
+Download https://plugins.gradle.org/m2/org/jetbrains/kotlin/kotlin-build-common/1.3.72/kotlin-build-common-1.3.72.jar
+Download https://plugins.gradle.org/m2/org/jetbrains/kotlinx/kotlinx-coroutines-core/1.2.1/kotlinx-coroutines-core-1.2.1.jar
+Download https://plugins.gradle.org/m2/org/jetbrains/annotations/13.0/annotations-13.0.jar
+Download https://plugins.gradle.org/m2/com/fasterxml/jackson/core/jackson-annotations/2.11.3/jackson-annotations-2.11.3.jar
+Download https://plugins.gradle.org/m2/com/fasterxml/jackson/core/jackson-core/2.11.3/jackson-core-2.11.3.jar
+Download https://plugins.gradle.org/m2/net/java/dev/jna/jna/5.5.0/jna-5.5.0.jar
+Download https://plugins.gradle.org/m2/org/apache/httpcomponents/httpcore/4.4.13/httpcore-4.4.13.jar
+Download https://plugins.gradle.org/m2/commons-logging/commons-logging/1.2/commons-logging-1.2.jar
+Download https://plugins.gradle.org/m2/commons-codec/commons-codec/1.11/commons-codec-1.11.jar
+Download https://plugins.gradle.org/m2/io/spring/gradle/dependency-management-plugin/1.0.10.RELEASE/dependency-management-plugin-1.0.10.RELEASE.jar
+
+FAILURE: Build failed with an exception.
+
+* Where:
+Build file '/workspace/source/build.gradle.kts' line: 2
+
+* What went wrong:
+An exception occurred applying plugin request [id: 'org.springframework.boot', version: '2.3.7.RELEASE']
+> Failed to apply plugin [id 'org.springframework.boot']
+   > Spring Boot plugin requires Gradle 5 (5.6.x only) or Gradle 6 (6.3 or later). The current version is Gradle 4.6
+
+* Try:
+Run with --stacktrace option to get the stack trace. Run with --info or --debug option to get more log output. Run with --scan to get full insights.
+
+* Get more help at https://help.gradle.org
+
+BUILD FAILED in 1m 25s
+[31m
+Pipeline failed on stage 'from-build-pack' : container 'step-build-gradle-build'. The execution of the pipeline has stopped.[0m
