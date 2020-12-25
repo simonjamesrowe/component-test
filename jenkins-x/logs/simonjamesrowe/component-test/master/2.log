@@ -1,0 +1,28 @@
+
+Showing logs for build [32mmeta-simonjamesrowe-component-t-p97wg-2[0m stage [32mmeta-pipeline[0m and container [32mcredential-initializer[0m
+{"level":"info","ts":1608932989.566899,"caller":"creds-init/main.go:44","msg":"Credentials initialized."}
+
+Showing logs for build [32mmeta-simonjamesrowe-component-t-p97wg-2[0m stage [32mmeta-pipeline[0m and container [32mworking-dir-initializer[0m
+
+Showing logs for build [32mmeta-simonjamesrowe-component-t-p97wg-2[0m stage [32mmeta-pipeline[0m and container [32mplace-tools[0m
+
+Showing logs for build [32mmeta-simonjamesrowe-component-t-p97wg-2[0m stage [32mmeta-pipeline[0m and container [32mstep-git-source-meta-simonjamesrowe-component-t-p97wg-pqfbn[0m
+{"level":"info","ts":1608932997.337468,"caller":"git/git.go:105","msg":"Successfully cloned https://github.com/simonjamesrowe/component-test.git @ b3b8dab6a1b090563434ba729382d49be8853e4a in path /workspace/source"}
+{"level":"warn","ts":1608932997.3375885,"caller":"git/git.go:152","msg":"Unexpected error: creating symlink: symlink /tekton/home/.ssh /****/.ssh: file exists"}
+{"level":"info","ts":1608932997.3822024,"caller":"git/git.go:133","msg":"Successfully initialized and updated submodules in path /workspace/source"}
+
+Showing logs for build [32mmeta-simonjamesrowe-component-t-p97wg-2[0m stage [32mmeta-pipeline[0m and container [32mstep-setup-builder-home[0m
+
+Showing logs for build [32mmeta-simonjamesrowe-component-t-p97wg-2[0m stage [32mmeta-pipeline[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:b3b8dab6a1b090563434ba729382d49be8853e4a
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mmeta-simonjamesrowe-component-t-p97wg-2[0m stage [32mmeta-pipeline[0m and container [32mstep-merge-pull-refs[0m
+SKIP merge-pull-refs: Nothing to merge
+
+Showing logs for build [32mmeta-simonjamesrowe-component-t-p97wg-2[0m stage [32mmeta-pipeline[0m and container [32mstep-create-effective-pipeline[0m
+error: failed to load project config in dir /workspace/source: Validation failures in YAML file /workspace/source/jenkins-x.yml:
+(****): Additional property agent is not allowed
+(****): Additional property extends is not allowed
+[31m
+Pipeline failed on stage 'meta-pipeline' : container 'step-create-effective-pipeline'. The execution of the pipeline has stopped.[0m
