@@ -1,0 +1,26 @@
+
+Showing logs for build [32mmeta-simonjamesrowe-component-t-kfhwz-4[0m stage [32mmeta-pipeline[0m and container [32mcredential-initializer[0m
+{"level":"info","ts":1608938042.6811192,"caller":"creds-init/main.go:44","msg":"Credentials initialized."}
+
+Showing logs for build [32mmeta-simonjamesrowe-component-t-kfhwz-4[0m stage [32mmeta-pipeline[0m and container [32mworking-dir-initializer[0m
+
+Showing logs for build [32mmeta-simonjamesrowe-component-t-kfhwz-4[0m stage [32mmeta-pipeline[0m and container [32mplace-tools[0m
+
+Showing logs for build [32mmeta-simonjamesrowe-component-t-kfhwz-4[0m stage [32mmeta-pipeline[0m and container [32mstep-git-source-meta-simonjamesrowe-component-t-kfhwz-qm85x[0m
+{"level":"info","ts":1608938048.7246132,"caller":"git/git.go:105","msg":"Successfully cloned https://github.com/simonjamesrowe/component-test.git @ 64e172e4c7cb72751d4e97e36ba60eb17c7d34af in path /workspace/source"}
+{"level":"warn","ts":1608938048.7249684,"caller":"git/git.go:152","msg":"Unexpected error: creating symlink: symlink /tekton/home/.ssh /****/.ssh: file exists"}
+{"level":"info","ts":1608938048.7785428,"caller":"git/git.go:133","msg":"Successfully initialized and updated submodules in path /workspace/source"}
+
+Showing logs for build [32mmeta-simonjamesrowe-component-t-kfhwz-4[0m stage [32mmeta-pipeline[0m and container [32mstep-setup-builder-home[0m
+
+Showing logs for build [32mmeta-simonjamesrowe-component-t-kfhwz-4[0m stage [32mmeta-pipeline[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:64e172e4c7cb72751d4e97e36ba60eb17c7d34af
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mmeta-simonjamesrowe-component-t-kfhwz-4[0m stage [32mmeta-pipeline[0m and container [32mstep-merge-pull-refs[0m
+SKIP merge-pull-refs: Nothing to merge
+
+Showing logs for build [32mmeta-simonjamesrowe-component-t-kfhwz-4[0m stage [32mmeta-pipeline[0m and container [32mstep-create-effective-pipeline[0m
+error: failed to fetch master from https://github.com/simonjamesrowe/jenkinsx-buildpacks.git in directory /tekton/home/.**/draft/packs/github.com/simonjamesrowe/jenkinsx-buildpacks: git output: fatal: couldn't find remote ref master: failed to run 'git fetch origin master' command in directory '/tekton/home/.**/draft/packs/github.com/simonjamesrowe/jenkinsx-buildpacks', output: 'fatal: couldn't find remote ref master'
+[31m
+Pipeline failed on stage 'meta-pipeline' : container 'step-create-effective-pipeline'. The execution of the pipeline has stopped.[0m
