@@ -1,6 +1,7 @@
 extends:
-  import: classic
-  file: gradle/pipeline.yaml
-agent:
-  label: jenkins-gradle6-java11
-  container: gradle
+  import: simonjamesrowe
+  file: gradle6-java11/pipeline.yaml
+modules:
+  - name: simonjamesrowe
+    gitUrl: https://github.com/simonjamesrowe/jenkinsx-buildpacks.git
+    gitRef: main
