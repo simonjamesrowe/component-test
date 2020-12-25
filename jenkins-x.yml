@@ -1,7 +1,3 @@
-extends:
-  import: simonjamesrowe
-  file: gradle6-java11/pipeline.yaml
-modules:
-  - name: simonjamesrowe
-    gitUrl: https://github.com/simonjamesrowe/jenkinsx-buildpacks.git
-    gitRef: main
+buildPackGitRef: main
+buildPackGitURL: https://github.com/simonjamesrowe/jenkinsx-buildpacks.git
+buildPack: gradle6-java11
