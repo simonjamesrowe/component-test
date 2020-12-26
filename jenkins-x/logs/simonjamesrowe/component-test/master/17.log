@@ -1,0 +1,105 @@
+
+Showing logs for build [32msimonjamesrowe-component-test-m-9fx9f-17[0m stage [32mfrom-build-pack[0m and container [32mcredential-initializer[0m
+{"level":"info","ts":1608993389.2677388,"caller":"creds-init/main.go:44","msg":"Credentials initialized."}
+
+Showing logs for build [32msimonjamesrowe-component-test-m-9fx9f-17[0m stage [32mfrom-build-pack[0m and container [32mworking-dir-initializer[0m
+
+Showing logs for build [32msimonjamesrowe-component-test-m-9fx9f-17[0m stage [32mfrom-build-pack[0m and container [32mplace-tools[0m
+
+Showing logs for build [32msimonjamesrowe-component-test-m-9fx9f-17[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-simonjamesrowe-component-test-m-9fx9f-dv6pn[0m
+{"level":"info","ts":1608993399.911972,"caller":"git/git.go:105","msg":"Successfully cloned https://github.com/simonjamesrowe/component-test.git @ v0.0.2 in path /workspace/source"}
+{"level":"warn","ts":1608993399.9120815,"caller":"git/git.go:152","msg":"Unexpected error: creating symlink: symlink /tekton/home/.ssh /****/.ssh: file exists"}
+{"level":"info","ts":1608993399.9634192,"caller":"git/git.go:133","msg":"Successfully initialized and updated submodules in path /workspace/source"}
+
+Showing logs for build [32msimonjamesrowe-component-test-m-9fx9f-17[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-builder-home[0m
+
+Showing logs for build [32msimonjamesrowe-component-test-m-9fx9f-17[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:aac6f48393be982dc5f8d6536cc088ae93d33c5c
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32msimonjamesrowe-component-test-m-9fx9f-17[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Generated Git credentials file /workspace/xdg_config/git/credentials
+
+Showing logs for build [32msimonjamesrowe-component-test-m-9fx9f-17[0m stage [32mfrom-build-pack[0m and container [32mstep-build-gradle-build[0m
+Starting a Gradle Daemon (subsequent builds will be faster)
+
+> Configure project :
+e: /workspace/source/build.gradle.kts:43:1: Expression 'publishing' cannot be invoked as a function. The function 'invoke()' is not found
+e: /workspace/source/build.gradle.kts:43:1: Unresolved reference. None of the following candidates is applicable because of receiver type mismatch: 
+public val PluginDependenciesSpec.publishing: PluginDependencySpec defined in org.gradle.kotlin.dsl
+e: /workspace/source/build.gradle.kts:44:2: Unresolved reference: publications
+e: /workspace/source/build.gradle.kts:45:3: Unresolved reference. None of the following candidates is applicable because of receiver type mismatch: 
+public inline fun <U : TypeVariable(T), T : Any> PolymorphicDomainObjectContainer<TypeVariable(T)>.create(name: String, type: KClass<TypeVariable(U)>): TypeVariable(U) defined in org.gradle.kotlin.dsl
+public inline fun <U : TypeVariable(T), T : Any> PolymorphicDomainObjectContainer<TypeVariable(T)>.create(name: String, type: KClass<TypeVariable(U)>, configuration: Action<in TypeVariable(U)>): TypeVariable(U) defined in org.gradle.kotlin.dsl
+public inline fun <reified U : Any> PolymorphicDomainObjectContainer<in TypeVariable(U)>.create(name: String): TypeVariable(U) defined in org.gradle.kotlin.dsl
+public inline fun <reified U : Any> PolymorphicDomainObjectContainer<in TypeVariable(U)>.create(name: String, noinline configuration: TypeVariable(U).() -> Unit): TypeVariable(U) defined in org.gradle.kotlin.dsl
+public fun DependencyHandler.create(group: String, name: String, version: String? = ..., configuration: String? = ..., classifier: String? = ..., ext: String? = ...): ExternalModuleDependency defined in org.gradle.kotlin.dsl
+public inline fun <reified T : Any> ExtensionContainer.create(name: String, vararg constructionArguments: Any): TypeVariable(T) defined in org.gradle.kotlin.dsl
+public inline fun <T : Any> ExtensionContainer.create(name: String, type: KClass<TypeVariable(T)>, vararg constructionArguments: Any): TypeVariable(T) defined in org.gradle.kotlin.dsl
+public inline fun <T : Any> ExtensionContainer.create(publicType: KClass<TypeVariable(T)>, name: String, instanceType: KClass<out TypeVariable(T)>, vararg constructionArguments: Any): TypeVariable(T) defined in org.gradle.kotlin.dsl
+public inline fun <T : Any> ExtensionContainer.create(publicType: TypeOf<TypeVariable(T)>, name: String, instanceType: KClass<out TypeVariable(T)>, vararg constructionArguments: Any): TypeVariable(T) defined in org.gradle.kotlin.dsl
+public inline fun TaskContainer.create(vararg options: Pair<String, Any?>): Task defined in org.gradle.kotlin.dsl
+public inline fun <reified T : Task> TaskContainer.create(name: String, vararg arguments: Any): TypeVariable(T) defined in org.gradle.kotlin.dsl
+public inline fun <T : Task> TaskContainer.create(name: String, type: KClass<TypeVariable(T)>): TypeVariable(T) defined in org.gradle.kotlin.dsl
+public inline fun <T : Task> TaskContainer.create(name: String, type: KClass<TypeVariable(T)>, vararg constructorArgs: Any): TypeVariable(T) defined in org.gradle.kotlin.dsl
+public inline fun <T : Task> TaskContainer.create(name: String, type: KClass<TypeVariable(T)>, configuration: Action<in TypeVariable(T)>): TypeVariable(T) defined in org.gradle.kotlin.dsl
+public inline fun <S : TypeVariable(T), T : Any> ModelMap<TypeVariable(T)>.create(name: String, type: KClass<TypeVariable(S)>): Unit defined in org.gradle.kotlin.dsl
+public inline fun <S : TypeVariable(T), T : Any> ModelMap<TypeVariable(T)>.create(name: String, type: KClass<TypeVariable(S)>, configAction: Action<in TypeVariable(S)>): Unit defined in org.gradle.kotlin.dsl
+public inline fun <T : Task> BinaryTasksCollection.create(name: String, type: KClass<TypeVariable(T)>, config: Action<in TypeVariable(T)>): Unit defined in org.gradle.kotlin.dsl
+e: /workspace/source/build.gradle.kts:46:4: Unresolved reference. None of the following candidates is applicable because of receiver type mismatch: 
+public inline fun <reified T : VersionControlSpec> VcsMapping.from(noinline configureAction: TypeVariable(T).() -> Unit): Unit defined in org.gradle.kotlin.dsl
+public inline fun <T : VersionControlSpec> VcsMapping.from(type: KClass<TypeVariable(T)>, configureAction: Action<in TypeVariable(T)>): Unit defined in org.gradle.kotlin.dsl
+
+FAILURE: Build failed with an exception.
+
+* Where:
+Build file '/workspace/source/build.gradle.kts' line: 43
+
+* What went wrong:
+Script compilation errors:
+
+  Line 43: publishing {
+           ^ Expression 'publishing' cannot be invoked as a function. The function 'invoke()' is not found
+
+  Line 43: publishing {
+           ^ Unresolved reference. None of the following candidates is applicable because of receiver type mismatch: 
+               public val PluginDependenciesSpec.publishing: PluginDependencySpec defined in org.gradle.kotlin.dsl
+
+  Line 44: 	publications {
+            ^ Unresolved reference: publications
+
+  Line 45: 		create<MavenPublication>("maven") {
+             ^ Unresolved reference. None of the following candidates is applicable because of receiver type mismatch: 
+                 public inline fun <U : TypeVariable(T), T : Any> PolymorphicDomainObjectContainer<TypeVariable(T)>.create(name: String, type: KClass<TypeVariable(U)>): TypeVariable(U) defined in org.gradle.kotlin.dsl
+                 public inline fun <U : TypeVariable(T), T : Any> PolymorphicDomainObjectContainer<TypeVariable(T)>.create(name: String, type: KClass<TypeVariable(U)>, configuration: Action<in TypeVariable(U)>): TypeVariable(U) defined in org.gradle.kotlin.dsl
+                 public inline fun <reified U : Any> PolymorphicDomainObjectContainer<in TypeVariable(U)>.create(name: String): TypeVariable(U) defined in org.gradle.kotlin.dsl
+                 public inline fun <reified U : Any> PolymorphicDomainObjectContainer<in TypeVariable(U)>.create(name: String, noinline configuration: TypeVariable(U).() -> Unit): TypeVariable(U) defined in org.gradle.kotlin.dsl
+                 public fun DependencyHandler.create(group: String, name: String, version: String? = ..., configuration: String? = ..., classifier: String? = ..., ext: String? = ...): ExternalModuleDependency defined in org.gradle.kotlin.dsl
+                 public inline fun <reified T : Any> ExtensionContainer.create(name: String, vararg constructionArguments: Any): TypeVariable(T) defined in org.gradle.kotlin.dsl
+                 public inline fun <T : Any> ExtensionContainer.create(name: String, type: KClass<TypeVariable(T)>, vararg constructionArguments: Any): TypeVariable(T) defined in org.gradle.kotlin.dsl
+                 public inline fun <T : Any> ExtensionContainer.create(publicType: KClass<TypeVariable(T)>, name: String, instanceType: KClass<out TypeVariable(T)>, vararg constructionArguments: Any): TypeVariable(T) defined in org.gradle.kotlin.dsl
+                 public inline fun <T : Any> ExtensionContainer.create(publicType: TypeOf<TypeVariable(T)>, name: String, instanceType: KClass<out TypeVariable(T)>, vararg constructionArguments: Any): TypeVariable(T) defined in org.gradle.kotlin.dsl
+                 public inline fun TaskContainer.create(vararg options: Pair<String, Any?>): Task defined in org.gradle.kotlin.dsl
+                 public inline fun <reified T : Task> TaskContainer.create(name: String, vararg arguments: Any): TypeVariable(T) defined in org.gradle.kotlin.dsl
+                 public inline fun <T : Task> TaskContainer.create(name: String, type: KClass<TypeVariable(T)>): TypeVariable(T) defined in org.gradle.kotlin.dsl
+                 public inline fun <T : Task> TaskContainer.create(name: String, type: KClass<TypeVariable(T)>, vararg constructorArgs: Any): TypeVariable(T) defined in org.gradle.kotlin.dsl
+                 public inline fun <T : Task> TaskContainer.create(name: String, type: KClass<TypeVariable(T)>, configuration: Action<in TypeVariable(T)>): TypeVariable(T) defined in org.gradle.kotlin.dsl
+                 public inline fun <S : TypeVariable(T), T : Any> ModelMap<TypeVariable(T)>.create(name: String, type: KClass<TypeVariable(S)>): Unit defined in org.gradle.kotlin.dsl
+                 public inline fun <S : TypeVariable(T), T : Any> ModelMap<TypeVariable(T)>.create(name: String, type: KClass<TypeVariable(S)>, configAction: Action<in TypeVariable(S)>): Unit defined in org.gradle.kotlin.dsl
+                 public inline fun <T : Task> BinaryTasksCollection.create(name: String, type: KClass<TypeVariable(T)>, config: Action<in TypeVariable(T)>): Unit defined in org.gradle.kotlin.dsl
+
+  Line 46: 			from(components["java"])
+              ^ Unresolved reference. None of the following candidates is applicable because of receiver type mismatch: 
+                  public inline fun <reified T : VersionControlSpec> VcsMapping.from(noinline configureAction: TypeVariable(T).() -> Unit): Unit defined in org.gradle.kotlin.dsl
+                  public inline fun <T : VersionControlSpec> VcsMapping.from(type: KClass<TypeVariable(T)>, configureAction: Action<in TypeVariable(T)>): Unit defined in org.gradle.kotlin.dsl
+
+5 errors
+
+* Try:
+Run with --stacktrace option to get the stack trace. Run with --info or --debug option to get more log output. Run with --scan to get full insights.
+
+* Get more help at https://help.gradle.org
+
+BUILD FAILED in 2m 0s
+[31m
+Pipeline failed on stage 'from-build-pack' : container 'step-build-gradle-build'. The execution of the pipeline has stopped.[0m
