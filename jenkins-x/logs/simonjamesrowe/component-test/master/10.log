@@ -1,0 +1,26 @@
+
+Showing logs for build [32mmeta-simonjamesrowe-component-t-zfrqv-10[0m stage [32mmeta-pipeline[0m and container [32mcredential-initializer[0m
+{"level":"info","ts":1608973324.578461,"caller":"creds-init/main.go:44","msg":"Credentials initialized."}
+
+Showing logs for build [32mmeta-simonjamesrowe-component-t-zfrqv-10[0m stage [32mmeta-pipeline[0m and container [32mworking-dir-initializer[0m
+
+Showing logs for build [32mmeta-simonjamesrowe-component-t-zfrqv-10[0m stage [32mmeta-pipeline[0m and container [32mplace-tools[0m
+
+Showing logs for build [32mmeta-simonjamesrowe-component-t-zfrqv-10[0m stage [32mmeta-pipeline[0m and container [32mstep-git-source-meta-simonjamesrowe-component-t-zfrqv-pzqqf[0m
+{"level":"info","ts":1608973331.871992,"caller":"git/git.go:105","msg":"Successfully cloned https://github.com/simonjamesrowe/component-test.git @ 62f1e2f1efb13fda9be8225a6b2df0160d980d0a in path /workspace/source"}
+{"level":"warn","ts":1608973331.8721275,"caller":"git/git.go:152","msg":"Unexpected error: creating symlink: symlink /tekton/home/.ssh /****/.ssh: file exists"}
+{"level":"info","ts":1608973331.9265296,"caller":"git/git.go:133","msg":"Successfully initialized and updated submodules in path /workspace/source"}
+
+Showing logs for build [32mmeta-simonjamesrowe-component-t-zfrqv-10[0m stage [32mmeta-pipeline[0m and container [32mstep-setup-builder-home[0m
+
+Showing logs for build [32mmeta-simonjamesrowe-component-t-zfrqv-10[0m stage [32mmeta-pipeline[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:62f1e2f1efb13fda9be8225a6b2df0160d980d0a
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mmeta-simonjamesrowe-component-t-zfrqv-10[0m stage [32mmeta-pipeline[0m and container [32mstep-merge-pull-refs[0m
+SKIP merge-pull-refs: Nothing to merge
+
+Showing logs for build [32mmeta-simonjamesrowe-component-t-zfrqv-10[0m stage [32mmeta-pipeline[0m and container [32mstep-create-effective-pipeline[0m
+error: no build pack for javascript exists at directory /tekton/home/.**/draft/packs/github.com/simonjamesrowe/jenkinsx-buildpacks/packs/javascript
+[31m
+Pipeline failed on stage 'meta-pipeline' : container 'step-create-effective-pipeline'. The execution of the pipeline has stopped.[0m
