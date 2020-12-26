@@ -1,0 +1,60 @@
+
+Showing logs for build [32msimonjamesrowe-component-test-m-zlmbx-14[0m stage [32mfrom-build-pack[0m and container [32mcredential-initializer[0m
+{"level":"info","ts":1608990194.2514317,"caller":"creds-init/main.go:44","msg":"Credentials initialized."}
+
+Showing logs for build [32msimonjamesrowe-component-test-m-zlmbx-14[0m stage [32mfrom-build-pack[0m and container [32mworking-dir-initializer[0m
+
+Showing logs for build [32msimonjamesrowe-component-test-m-zlmbx-14[0m stage [32mfrom-build-pack[0m and container [32mplace-tools[0m
+
+Showing logs for build [32msimonjamesrowe-component-test-m-zlmbx-14[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-simonjamesrowe-component-test-m-zlmbx-wjgqv[0m
+{"level":"info","ts":1608990205.461314,"caller":"git/git.go:105","msg":"Successfully cloned https://github.com/simonjamesrowe/component-test.git @ v0.0.8 in path /workspace/source"}
+{"level":"warn","ts":1608990205.4614825,"caller":"git/git.go:152","msg":"Unexpected error: creating symlink: symlink /tekton/home/.ssh /****/.ssh: file exists"}
+{"level":"info","ts":1608990205.5099852,"caller":"git/git.go:133","msg":"Successfully initialized and updated submodules in path /workspace/source"}
+
+Showing logs for build [32msimonjamesrowe-component-test-m-zlmbx-14[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-builder-home[0m
+
+Showing logs for build [32msimonjamesrowe-component-test-m-zlmbx-14[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:eb1361c05787af9e36a7c5cb16320f956a7017b6
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32msimonjamesrowe-component-test-m-zlmbx-14[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Generated Git credentials file /workspace/xdg_config/git/credentials
+
+Showing logs for build [32msimonjamesrowe-component-test-m-zlmbx-14[0m stage [32mfrom-build-pack[0m and container [32mstep-build-gradle-build[0m
+Starting a Gradle Daemon (subsequent builds will be faster)
+> Task :clean UP-TO-DATE
+> Task :compileKotlin
+> Task :compileJava NO-SOURCE
+> Task :processResources
+> Task :classes
+> Task :bootJar
+> Task :inspectClassesForKotlinIC
+> Task :jar SKIPPED
+> Task :assemble
+> Task :compileTestKotlin
+> Task :compileTestJava NO-SOURCE
+> Task :processTestResources NO-SOURCE
+> Task :testClasses UP-TO-DATE
+> Task :test
+> Task :check
+> Task :build
+
+BUILD SUCCESSFUL in 2m 51s
+7 actionable tasks: 6 executed, 1 up-to-date
+
+Showing logs for build [32msimonjamesrowe-component-test-m-zlmbx-14[0m stage [32mfrom-build-pack[0m and container [32mstep-postbuild-step4[0m
+Starting a Gradle Daemon (subsequent builds will be faster)
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Task 'publish' not found in **** project 'component-test'.
+
+* Try:
+Run gradle tasks to get a list of available tasks. Run with --stacktrace option to get the stack trace. Run with --info or --debug option to get more log output. Run with --scan to get full insights.
+
+* Get more help at https://help.gradle.org
+
+BUILD FAILED in 1m 50s
+[31m
+Pipeline failed on stage 'from-build-pack' : container 'step-postbuild-step4'. The execution of the pipeline has stopped.[0m
