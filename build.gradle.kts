@@ -5,6 +5,7 @@ plugins {
 	id("io.spring.dependency-management") version "1.0.10.RELEASE"
 	kotlin("jvm") version "1.3.72"
 	kotlin("plugin.spring") version "1.3.72"
+	`maven-publish`
 }
 
 group = "com.simonjamesrowe"
@@ -40,6 +41,7 @@ tasks.getByName<Jar>("jar") {
 tasks.getByName<Jar>("bootJar") {
 	enabled = false
 }
+
 publishing {
 	publications {
 		create<MavenPublication>("maven") {
@@ -47,4 +49,3 @@ publishing {
 		}
 	}
 }
-
