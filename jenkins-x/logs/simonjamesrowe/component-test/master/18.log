@@ -1,0 +1,67 @@
+
+Showing logs for build [32msimonjamesrowe-component-test-m-rnhjj-18[0m stage [32mfrom-build-pack[0m and container [32mcredential-initializer[0m
+{"level":"info","ts":1608993721.9547195,"caller":"creds-init/main.go:44","msg":"Credentials initialized."}
+
+Showing logs for build [32msimonjamesrowe-component-test-m-rnhjj-18[0m stage [32mfrom-build-pack[0m and container [32mworking-dir-initializer[0m
+
+Showing logs for build [32msimonjamesrowe-component-test-m-rnhjj-18[0m stage [32mfrom-build-pack[0m and container [32mplace-tools[0m
+
+Showing logs for build [32msimonjamesrowe-component-test-m-rnhjj-18[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-simonjamesrowe-component-test-m-rnhjj-l5mrs[0m
+{"level":"info","ts":1608993733.1559727,"caller":"git/git.go:105","msg":"Successfully cloned https://github.com/simonjamesrowe/component-test.git @ v0.0.3 in path /workspace/source"}
+{"level":"warn","ts":1608993733.156167,"caller":"git/git.go:152","msg":"Unexpected error: creating symlink: symlink /tekton/home/.ssh /****/.ssh: file exists"}
+{"level":"info","ts":1608993733.2039552,"caller":"git/git.go:133","msg":"Successfully initialized and updated submodules in path /workspace/source"}
+
+Showing logs for build [32msimonjamesrowe-component-test-m-rnhjj-18[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-builder-home[0m
+
+Showing logs for build [32msimonjamesrowe-component-test-m-rnhjj-18[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:f3bd545ed3b959c0ab3a3297db09d01229f59077
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32msimonjamesrowe-component-test-m-rnhjj-18[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Generated Git credentials file /workspace/xdg_config/git/credentials
+
+Showing logs for build [32msimonjamesrowe-component-test-m-rnhjj-18[0m stage [32mfrom-build-pack[0m and container [32mstep-build-gradle-build[0m
+Starting a Gradle Daemon (subsequent builds will be faster)
+> Task :clean UP-TO-DATE
+> Task :compileKotlin
+> Task :compileJava NO-SOURCE
+> Task :processResources
+> Task :classes
+> Task :bootJar SKIPPED
+> Task :inspectClassesForKotlinIC
+> Task :jar
+> Task :assemble
+> Task :compileTestKotlin
+> Task :compileTestJava NO-SOURCE
+> Task :processTestResources NO-SOURCE
+> Task :testClasses UP-TO-DATE
+> Task :test
+> Task :check
+> Task :build
+
+BUILD SUCCESSFUL in 3m 36s
+7 actionable tasks: 6 executed, 1 up-to-date
+
+Showing logs for build [32msimonjamesrowe-component-test-m-rnhjj-18[0m stage [32mfrom-build-pack[0m and container [32mstep-postbuild-gradle-publish[0m
+Starting a Gradle Daemon (subsequent builds will be faster)
+> Task :compileKotlin UP-TO-DATE
+> Task :compileJava NO-SOURCE
+> Task :processResources UP-TO-DATE
+> Task :classes UP-TO-DATE
+> Task :inspectClassesForKotlinIC
+> Task :jar
+> Task :generateMetadataFileForMavenPublication
+> Task :generatePomFileForMavenPublication
+
+> Task :publishMavenPublicationToMavenRepository
+Cannot upload checksum for module-maven-metadata.xml. Remote repository doesn't support sha-256. Error: Could not PUT 'http://nexus/repository/maven-releases/com/simonjamesrowe/component-test/maven-metadata.xml.sha256'. Received status code 400 from server: Bad Request
+Cannot upload checksum for module-maven-metadata.xml. Remote repository doesn't support sha-512. Error: Could not PUT 'http://nexus/repository/maven-releases/com/simonjamesrowe/component-test/maven-metadata.xml.sha512'. Received status code 400 from server: Bad Request
+
+> Task :publish
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 7.0.
+Use '--warning-mode all' to show the individual deprecation warnings.
+See https://docs.gradle.org/6.5.1/userguide/command_line_interface.html#sec:command_line_warnings
+
+BUILD SUCCESSFUL in 2m 37s
+7 actionable tasks: 5 executed, 2 up-to-date
