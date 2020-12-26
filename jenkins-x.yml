@@ -1,1 +1,1 @@
-buildPack: javascript
+buildPack: gradle6-java11
