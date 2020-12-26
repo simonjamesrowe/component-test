@@ -33,3 +33,18 @@ tasks.withType<KotlinCompile> {
 tasks.withType<Test> {
 	useJUnitPlatform()
 }
+
+tasks.getByName<Jar>("jar") {
+	enabled = true
+}
+tasks.getByName<Jar>("bootJar") {
+	enabled = false
+}
+publishing {
+	publications {
+		create<MavenPublication>("maven") {
+			from(components["java"])
+		}
+	}
+}
+
