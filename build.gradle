@@ -1,0 +1,81 @@
+plugins {
+    id 'org.springframework.boot' version '2.3.4.RELEASE'
+    id 'io.spring.dependency-management' version '1.0.9.RELEASE'
+    id 'java-library'
+    id 'maven-publish'
+}
+
+apply plugin: 'java'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
+
+repositories {
+    mavenCentral()
+}
+
+//build a normal jar and not a spring boot jar.
+bootJar.enabled = false
+jar.enabled = true
+
+group = 'com.simonjamesrowe'
+
+
+ext {
+    set('springCloudVersion', 'Hoxton.SR8')
+}
+
+dependencyManagement {
+    imports { mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}" }
+}
+
+dependencies {
+    annotationProcessor('org.springframework.boot:spring-boot-configuration-processor')
+    annotationProcessor('org.projectlombok:lombok')
+
+    api('org.springframework.boot:spring-boot-starter-test')
+    api('org.springframework.cloud:spring-cloud-contract-wiremock')
+    api('org.springframework.cloud:spring-cloud-kubernetes-config')
+    api('org.springframework.security:spring-security-oauth2-jose')
+
+    api("org.testcontainers:testcontainers:1.15.1")
+    api("org.testcontainers:elasticsearch:1.15.1")
+
+    api("com.github.tomakehurst:wiremock:2.25.1")
+    api('org.apache.commons:commons-lang3:3.10')
+    api('org.hibernate.validator:hibernate-validator:6.1.5.Final')
+    api('org.testcontainers:vault:1.15.1')
+    api('io.rest-assured:rest-assured:3.3.0')
+    api('commons-io:commons-io:2.7')
+
+    compileOnly('org.projectlombok:lombok')
+    compileOnly('org.springframework.boot:spring-boot-starter-data-mongodb')
+
+    testImplementation('org.springframework.cloud:spring-cloud-starter-vault-config')
+    compile('org.springframework.kafka:spring-kafka')
+    api("org.springframework.kafka:spring-kafka-test")
+    api("net.jodah:failsafe:2.4.0")
+    testImplementation("io.searchbox:jest:6.3.1")
+    testImplementation('org.springframework.boot:spring-boot-starter-data-mongodb')
+    testImplementation('org.springframework.boot:spring-boot-starter-data-redis')
+    testImplementation('org.springframework.boot:spring-boot-starter-data-jpa')
+    testImplementation('org.postgresql:postgresql')
+}
+
+
+test {
+    useJUnitPlatform()
+}
+
+task sourcesJar(type: Jar, dependsOn: classes) {
+    classifier('sources')
+    from sourceSets.main.allSource
+}
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            from components.java
+            artifact sourcesJar
+        }
+    }
+}
