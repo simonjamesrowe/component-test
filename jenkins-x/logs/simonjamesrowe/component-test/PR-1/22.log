@@ -1,0 +1,57 @@
+
+Showing logs for build [32msimonjamesrowe-component-test-p-mh5jz-22[0m stage [32mfrom-build-pack[0m and container [32mcredential-initializer[0m
+{"level":"info","ts":1609172725.675235,"caller":"creds-init/main.go:44","msg":"Credentials initialized."}
+
+Showing logs for build [32msimonjamesrowe-component-test-p-mh5jz-22[0m stage [32mfrom-build-pack[0m and container [32mworking-dir-initializer[0m
+
+Showing logs for build [32msimonjamesrowe-component-test-p-mh5jz-22[0m stage [32mfrom-build-pack[0m and container [32mplace-tools[0m
+
+Showing logs for build [32msimonjamesrowe-component-test-p-mh5jz-22[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-simonjamesrowe-component-test-p-mh5jz-ndzpl[0m
+{"level":"info","ts":1609172731.82464,"caller":"git/git.go:105","msg":"Successfully cloned https://github.com/simonjamesrowe/component-test.git @ master in path /workspace/source"}
+{"level":"warn","ts":1609172731.8247511,"caller":"git/git.go:152","msg":"Unexpected error: creating symlink: symlink /tekton/home/.ssh /****/.ssh: file exists"}
+{"level":"info","ts":1609172731.878723,"caller":"git/git.go:133","msg":"Successfully initialized and updated submodules in path /workspace/source"}
+
+Showing logs for build [32msimonjamesrowe-component-test-p-mh5jz-22[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-builder-home[0m
+
+Showing logs for build [32msimonjamesrowe-component-test-p-mh5jz-22[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:f3bd545ed3b959c0ab3a3297db09d01229f59077,1:ee494bd90f42a85920e1b3866b7b521adfd71255
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git fetch origin --unshallow ee494bd90f42a85920e1b3866b7b521adfd71255: f3bd545ed3b959c0ab3a3297db09d01229f59077:
+DEBUG: ran git fetch --unshallow origin ee494bd90f42a85920e1b3866b7b521adfd71255: f3bd545ed3b959c0ab3a3297db09d01229f59077: in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git branch
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git checkout master
+DEBUG: ran git checkout master in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git reset --hard f3bd545ed3b959c0ab3a3297db09d01229f59077
+DEBUG: ran git reset --hard f3bd545ed3b959c0ab3a3297db09d01229f59077 in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git clean -fd .
+DEBUG: ran clean --force -d . in 
+DEBUG: JX_LOG_LEVEL=error LC_ALL=C git merge ee494bd90f42a85920e1b3866b7b521adfd71255
+DEBUG: ran git merge ee494bd90f42a85920e1b3866b7b521adfd71255 in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git log --format=%H%x1f%an%x1f%ae%x1f%cn%x1f%ce%x1f%s%n%b%x1e f3bd545ed3b959c0ab3a3297db09d01229f59077..HEAD
+Merged SHA ee494bd90f42a85920e1b3866b7b521adfd71255 with commit message 'trigger build' into base branch master
+Merged SHA 2dbabb09896535b1b6dd1dfaa067cedd4e20e994 with commit message 'trigger build' into base branch master
+Merged SHA c76125376833a24d82928c81522689485a8b81de with commit message 'Trigger rebuild' into base branch master
+Merged SHA a7e1c2750230f4e6022e7c88b33d200d22c198a2 with commit message 'Trigger rebuild' into base branch master
+Merged SHA 61a4a3a0b7f1649b2582a066dfc8ef80c391e2a9 with commit message 'retrigger build' into base branch master
+Merged SHA f56b697f086662d32d32f3ea385785b53f718caa with commit message 'trigger build' into base branch master
+Merged SHA 83231ff1bd0f91c4eba9ad95d00b618743f5c75b with commit message 'Move sidecar config to buildpack' into base branch master
+Merged SHA f34bf7b6a0436926334c7fa1781e9cbb91041788 with commit message 'Another attempt at adding sidecars to pipeline' into base branch master
+Merged SHA abd307643317ae7077f0cbb1ae6079834431bcd0 with commit message 'Trigger build with pipeline overrides - sidecars' into base branch master
+Merged SHA 8cfe615ebe503f78ac220f363ea4ff40b9225840 with commit message 'Trigger build' into base branch master
+Merged SHA 9a9b753635913eb1877b56c72aadf3362d76a84b with commit message 'trigger build' into base branch master
+Merged SHA aca9757e761e9918d1e9f7ce1bffb0adb26d0f95 with commit message 'trigger build' into base branch master
+Merged SHA 40b5457204270b4087e99aa91902bebc5c66bb04 with commit message 'trigger build.' into base branch master
+Merged SHA 92dfb4f7836032c3afed8495778c669ca1bebb4a with commit message 'retrigger' into base branch master
+Merged SHA 669166c7fa95451556ec675bda05771e675496a6 with commit message 'trigger build' into base branch master
+Merged SHA f86c7f09b5b160d6b58e9126e3ccee05adb7740a with commit message 'trigger build again' into base branch master
+Merged SHA f2f147bbe59188df29db7c6cf09a12ef1150c50d with commit message 'trigger build' into base branch master
+Merged SHA 94c6870060da1527bbc30ef2cebbfea375607e08 with commit message 'trigger build' into base branch master
+Merged SHA b623c2e1e3622a51c9caa8963785f35ff594d3c2 with commit message 'trigger build' into base branch master
+Merged SHA 428777eac2789a83b587cc23e2f4f6e4f75e2c08 with commit message 'more testing.' into base branch master
+Merged SHA 6592466eda5529e8540ebb40bb12a78300311e84 with commit message 'trigger PR build.' into base branch master
+Merged SHA 0ff2b7dba2b919836ba1e3ebdf064cfe26b28beb with commit message 'update readme to trigger PR build' into base branch master
+Merged SHA 954a1d8177684d2c6bff5e69d9d1131429fbf8fb with commit message 'add code.' into base branch master
+
+Showing logs for build [32msimonjamesrowe-component-test-p-mh5jz-22[0m stage [32mfrom-build-pack[0m and container [32mstep-build-start-docker[0m
+/bin/sh: service: command not found
+[31m
+Pipeline failed on stage 'from-build-pack' : container 'step-build-start-docker'. The execution of the pipeline has stopped.[0m
