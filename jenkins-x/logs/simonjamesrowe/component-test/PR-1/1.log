@@ -1,0 +1,14 @@
+
+Showing logs for build [32msimonjamesrowe-component-test-p-9vs4b-1[0m stage [32mfrom-build-pack[0m and container [32mcredential-initializer[0m
+Unable to retrieve container logs for containerd://40f4354fea1765da9764111f4c5c285326a29476f80dcfb3d47981fd3fac5b8a
+
+Showing logs for build [32msimonjamesrowe-component-test-p-9vs4b-1[0m stage [32mfrom-build-pack[0m and container [32mworking-dir-initializer[0m
+Unable to retrieve container logs for containerd://f8c772a69663046ea35afd68fcb11f1481e579b09512d46861449180d990e16d
+
+Showing logs for build [32msimonjamesrowe-component-test-p-9vs4b-1[0m stage [32mfrom-build-pack[0m and container [32mplace-tools[0m
+Unable to retrieve container logs for containerd://c0cf23abf3a08a0f5e8493f36baf761e45a778192c5ff6ee3ef*****927399b1
+
+Showing logs for build [32msimonjamesrowe-component-test-p-9vs4b-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-simonjamesrowe-component-test-p-9vs4b-fdpbg[0m
+Unable to retrieve container logs for containerd://3ba37a559462102a999797e0c68de09ad9f76ad786c87ce32dc25412675d9813
+[31m
+Pipeline failed on stage 'from-build-pack' : container 'step-git-source-simonjamesrowe-component-test-p-9vs4b-fdpbg'. The execution of the pipeline has stopped.[0m
