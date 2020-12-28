@@ -1,33 +1,67 @@
 
-Showing logs for build [32mmeta-simonjamesrowe-component-t-9p2qj-1[0m stage [32mmeta-pipeline[0m and container [32mcredential-initializer[0m
-{"level":"info","ts":1608932838.5904284,"caller":"creds-init/main.go:44","msg":"Credentials initialized."}
+Showing logs for build [32msimonjamesrowe-component-test-m-j58bg-1[0m stage [32mfrom-build-pack[0m and container [32mcredential-initializer[0m
+{"level":"info","ts":1609196421.334834,"caller":"creds-init/main.go:44","msg":"Credentials initialized."}
 
-Showing logs for build [32mmeta-simonjamesrowe-component-t-9p2qj-1[0m stage [32mmeta-pipeline[0m and container [32mworking-dir-initializer[0m
+Showing logs for build [32msimonjamesrowe-component-test-m-j58bg-1[0m stage [32mfrom-build-pack[0m and container [32mworking-dir-initializer[0m
 
-Showing logs for build [32mmeta-simonjamesrowe-component-t-9p2qj-1[0m stage [32mmeta-pipeline[0m and container [32mplace-tools[0m
+Showing logs for build [32msimonjamesrowe-component-test-m-j58bg-1[0m stage [32mfrom-build-pack[0m and container [32mplace-tools[0m
 
-Showing logs for build [32mmeta-simonjamesrowe-component-t-9p2qj-1[0m stage [32mmeta-pipeline[0m and container [32mstep-git-source-meta-simonjamesrowe-component-t-9p2qj-4jnvj[0m
-{"level":"info","ts":1608932846.2895277,"caller":"git/git.go:105","msg":"Successfully cloned https://github.com/simonjamesrowe/component-test.git @ master in path /workspace/source"}
-{"level":"warn","ts":1608932846.2896438,"caller":"git/git.go:152","msg":"Unexpected error: creating symlink: symlink /tekton/home/.ssh /****/.ssh: file exists"}
-{"level":"info","ts":1608932846.3907197,"caller":"git/git.go:133","msg":"Successfully initialized and updated submodules in path /workspace/source"}
+Showing logs for build [32msimonjamesrowe-component-test-m-j58bg-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-simonjamesrowe-component-test-m-j58bg-lv4pt[0m
+{"level":"info","ts":1609196464.394114,"caller":"git/git.go:105","msg":"Successfully cloned https://github.com/simonjamesrowe/component-test.git @ v0.0.4 in path /workspace/source"}
+{"level":"warn","ts":1609196464.3942795,"caller":"git/git.go:152","msg":"Unexpected error: creating symlink: symlink /tekton/home/.ssh /****/.ssh: file exists"}
+{"level":"info","ts":1609196464.477885,"caller":"git/git.go:133","msg":"Successfully initialized and updated submodules in path /workspace/source"}
 
-Showing logs for build [32mmeta-simonjamesrowe-component-t-9p2qj-1[0m stage [32mmeta-pipeline[0m and container [32mstep-setup-builder-home[0m
+Showing logs for build [32msimonjamesrowe-component-test-m-j58bg-1[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-builder-home[0m
 
-Showing logs for build [32mmeta-simonjamesrowe-component-t-9p2qj-1[0m stage [32mmeta-pipeline[0m and container [32mstep-git-merge[0m
+Showing logs for build [32msimonjamesrowe-component-test-m-j58bg-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
 Using SHAs from PULL_REFS=master:
 WARNING: no SHAs to merge, falling back to initial cloned commit
 
-Showing logs for build [32mmeta-simonjamesrowe-component-t-9p2qj-1[0m stage [32mmeta-pipeline[0m and container [32mstep-merge-pull-refs[0m
-SKIP merge-pull-refs: Nothing to merge
+Showing logs for build [32msimonjamesrowe-component-test-m-j58bg-1[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Generated Git credentials file /workspace/xdg_config/git/credentials
 
-Showing logs for build [32mmeta-simonjamesrowe-component-t-9p2qj-1[0m stage [32mmeta-pipeline[0m and container [32mstep-create-effective-pipeline[0m
-performing pack detection in folder /workspace/source
---> Draft detected Kotlin (92.708988%)
---> Could not find a pack for Kotlin. Trying to find the next likely language match...
---> Draft detected YAML (7.228158%)
---> Could not find a pack for YAML. Trying to find the next likely language match...
---> Draft detected INI (0.062854%)
---> Could not find a pack for INI. Trying to find the next likely language match...
-error: failed to discover the build pack: failed to discover task pack in dir /workspace/source: there was an error detecting the language using packs from /tekton/home/.**/draft/packs/github.com/jenkins-x-buildpacks/jenkins-x-kubernetes/packs
-[31m
-Pipeline failed on stage 'meta-pipeline' : container 'step-create-effective-pipeline'. The execution of the pipeline has stopped.[0m
+Showing logs for build [32msimonjamesrowe-component-test-m-j58bg-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-gradle-build[0m
+Starting a Gradle Daemon (subsequent builds will be faster)
+> Task :clean UP-TO-DATE
+> Task :compileKotlin
+> Task :compileJava NO-SOURCE
+> Task :processResources
+> Task :classes
+> Task :bootJar SKIPPED
+> Task :inspectClassesForKotlinIC
+> Task :jar
+> Task :assemble
+> Task :compileTestKotlin
+> Task :compileTestJava NO-SOURCE
+> Task :processTestResources NO-SOURCE
+> Task :testClasses UP-TO-DATE
+> Task :test
+> Task :check
+> Task :build
+
+BUILD SUCCESSFUL in 3m 13s
+7 actionable tasks: 6 executed, 1 up-to-date
+
+Showing logs for build [32msimonjamesrowe-component-test-m-j58bg-1[0m stage [32mfrom-build-pack[0m and container [32mstep-postbuild-gradle-publish[0m
+Starting a Gradle Daemon (subsequent builds will be faster)
+> Task :compileKotlin UP-TO-DATE
+> Task :compileJava NO-SOURCE
+> Task :processResources UP-TO-DATE
+> Task :classes UP-TO-DATE
+> Task :inspectClassesForKotlinIC
+> Task :jar
+> Task :generateMetadataFileForMavenPublication
+> Task :generatePomFileForMavenPublication
+
+> Task :publishMavenPublicationToMavenRepository
+Cannot upload checksum for module-maven-metadata.xml. Remote repository doesn't support sha-256. Error: Could not PUT 'http://nexus/repository/maven-releases/com/simonjamesrowe/component-test/maven-metadata.xml.sha256'. Received status code 400 from server: Bad Request
+Cannot upload checksum for module-maven-metadata.xml. Remote repository doesn't support sha-512. Error: Could not PUT 'http://nexus/repository/maven-releases/com/simonjamesrowe/component-test/maven-metadata.xml.sha512'. Received status code 400 from server: Bad Request
+
+> Task :publish
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 7.0.
+Use '--warning-mode all' to show the individual deprecation warnings.
+See https://docs.gradle.org/6.5.1/userguide/command_line_interface.html#sec:command_line_warnings
+
+BUILD SUCCESSFUL in 2m 26s
+7 actionable tasks: 5 executed, 2 up-to-date
