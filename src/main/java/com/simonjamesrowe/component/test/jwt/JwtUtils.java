@@ -49,7 +49,6 @@ public abstract class JwtUtils {
         return signedJWT.serialize();
     }
 
-
     protected static JWTClaimsSet claims(String userId, String name, String email, String username, List<String> roles) {
         JWTClaimsSet.Builder builder =  new JWTClaimsSet.Builder()
                 .claim("sub", userId)

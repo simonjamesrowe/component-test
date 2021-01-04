@@ -1,6 +1,6 @@
 plugins {
-    id 'org.springframework.boot' version '2.3.4.RELEASE'
-    id 'io.spring.dependency-management' version '1.0.9.RELEASE'
+    id 'org.springframework.boot' version '2.4.1'
+    id 'io.spring.dependency-management' version '1.0.10.RELEASE'
     id 'java-library'
     id 'maven-publish'
 }
@@ -11,17 +11,19 @@ apply plugin: 'io.spring.dependency-management'
 
 repositories {
     mavenCentral()
+    maven { url 'https://repo.spring.io/milestone' }
 }
 
 //build a normal jar and not a spring boot jar.
 bootJar.enabled = false
 jar.enabled = true
+sourceCompatibility = '11'
 
 group = 'com.simonjamesrowe'
 
 
 ext {
-    set('springCloudVersion', 'Hoxton.SR8')
+    set('springCloudVersion', '2020.0.0')
 }
 
 dependencyManagement {
@@ -34,13 +36,12 @@ dependencies {
 
     api('org.springframework.boot:spring-boot-starter-test')
     api('org.springframework.cloud:spring-cloud-contract-wiremock')
-    api('org.springframework.cloud:spring-cloud-kubernetes-config')
+    api('org.springframework.cloud:spring-cloud-kubernetes-config:1.1.7.RELEASE')
     api('org.springframework.security:spring-security-oauth2-jose')
 
     api("org.testcontainers:testcontainers:1.15.1")
     api("org.testcontainers:elasticsearch:1.15.1")
 
-    api("com.github.tomakehurst:wiremock:2.25.1")
     api('org.apache.commons:commons-lang3:3.10')
     api('org.hibernate.validator:hibernate-validator:6.1.5.Final')
     api('org.testcontainers:vault:1.15.1')
@@ -56,6 +57,7 @@ dependencies {
     api("net.jodah:failsafe:2.4.0")
     testImplementation("io.searchbox:jest:6.3.1")
     testImplementation('org.springframework.boot:spring-boot-starter-data-mongodb')
+    testImplementation('org.springframework.boot:spring-boot-starter-web')
     testImplementation('org.springframework.boot:spring-boot-starter-data-redis')
     testImplementation('org.springframework.boot:spring-boot-starter-data-jpa')
     testImplementation('org.postgresql:postgresql')

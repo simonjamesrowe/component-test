@@ -10,9 +10,9 @@ import java.util.Map;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @DirtiesContext(classMode = DirtiesContext.ClassMode.BEFORE_CLASS)
-public class WiremockBootstrapContextTest extends BaseComponentTest {
+public class WiremockTest extends BaseComponentTest {
 
-    @Value("${test.uri}")
+    @Value("http://localhost:${wiremock.server.port}/test")
     private String testEndpoint;
 
     @Value("${wiremock.server.port}")

@@ -45,7 +45,7 @@ public class VaultTestContainersInitializer  {
         System.setProperty("spring.cloud.vault.connection-timeout", "5000");
         System.setProperty("spring.cloud.vault.kv.backend-version", "2");
         System.setProperty("spring.cloud.vault.kv.enabled", "true");
-        System.setProperty("spring.cloud.vault.generic.enabled", "true");
+        System.setProperty("spring.cloud.vault.kv.backend", "secret");
         System.setProperty("spring.cloud.vault.enabled", "true");
         System.setProperty("spring.cloud.vault.read-timeout", "15000");
     }

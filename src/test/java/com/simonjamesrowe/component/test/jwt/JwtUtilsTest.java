@@ -11,7 +11,6 @@ import java.util.UUID;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-
 class JwtUtilsTest extends BaseComponentTest {
 
     @Value("http://localhost:${wiremock.server.port}/auth/realms/master/protocol/openid-connect/certs")

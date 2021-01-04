@@ -5,6 +5,8 @@ import org.testcontainers.DockerClientFactory;
 import org.testcontainers.containers.wait.strategy.Wait;
 import org.testcontainers.elasticsearch.ElasticsearchContainer;
 
+import java.time.Duration;
+
 /**
  * Runs test containers for Elasticsearch
  */
@@ -17,7 +19,7 @@ public class ElasticsearchTestContainerInitializer {
     public ElasticsearchTestContainerInitializer(WithElasticsearchContainer withElasticsearchContainer) {
         if (!initialized) {
             elasticsearchContainer = new ElasticsearchContainer("docker.elastic.co/elasticsearch/elasticsearch:7.7.1");
-            elasticsearchContainer.setWaitStrategy(Wait.forListeningPort());
+            elasticsearchContainer.setWaitStrategy(Wait.forListeningPort().withStartupTimeout(Duration.ofSeconds(60)));
             initialize();
         }
     }
