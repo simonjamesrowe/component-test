@@ -45,6 +45,7 @@ dependencies {
     api('org.apache.commons:commons-lang3:3.10')
     api('org.hibernate.validator:hibernate-validator:6.1.5.Final')
     api('org.testcontainers:vault:1.15.1')
+    api('org.testcontainers:kafka:1.15.1')
     api('io.rest-assured:rest-assured:3.3.0')
     api('commons-io:commons-io:2.7')
 

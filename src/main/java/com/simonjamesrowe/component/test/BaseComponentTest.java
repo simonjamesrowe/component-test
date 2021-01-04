@@ -25,6 +25,8 @@ import java.util.Optional;
 @ActiveProfiles({"component-test", "wiremock"})
 public abstract class BaseComponentTest {
 
+    protected Integer partitionCount = 2;
+
     @LocalServerPort
     protected Integer port;
 
@@ -49,7 +51,7 @@ public abstract class BaseComponentTest {
         optionalKafkaListenerEndpointRegistry.ifPresent(registry -> {
             for (MessageListenerContainer messageListenerContainer : registry.getListenerContainers()) {
                 ContainerTestUtils.waitForAssignment(messageListenerContainer,
-                    2);
+                    partitionCount);
             }
         });
     }

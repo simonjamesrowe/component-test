@@ -12,6 +12,7 @@ A library of helper functions to help with component tests for spring boot appli
         - poolSize - the number of connections in conn pool (default 2)
         - command - the command for container (default  postgres -c max_connections=500 -c shared_buffers=256MB)
 - @WithElasticSearchContainer
+- @WithKafkaContainer  
 - @WithEmbeddedKafka
     
 There are two ways to use these annotations:
