@@ -18,8 +18,7 @@ public class ElasticsearchTestContainerInitializer {
 
     public ElasticsearchTestContainerInitializer(WithElasticsearchContainer withElasticsearchContainer) {
         if (!initialized) {
-            elasticsearchContainer = new ElasticsearchContainer("docker.elastic.co/elasticsearch/elasticsearch:7.7.1");
-            elasticsearchContainer.setWaitStrategy(Wait.forListeningPort().withStartupTimeout(Duration.ofSeconds(60)));
+            elasticsearchContainer = new ElasticsearchContainer("docker.elastic.co/elasticsearch/elasticsearch:7.9.2");
             initialize();
         }
     }
@@ -30,13 +29,18 @@ public class ElasticsearchTestContainerInitializer {
             PORT = elasticsearchContainer.getMappedPort(9200);
         }
         initialized = true;
+        String elasticSearchUrl = String.format(
+                "http://%s:%s",
+                DockerClientFactory.instance().dockerHostIpAddress(),
+                PORT
+        );
         System.setProperty(
-                "elasticsearch.url",
-                String.format(
-                        "http://%s:%s",
-                        DockerClientFactory.instance().dockerHostIpAddress(),
-                        PORT
-                )
+                "spring.data.elasticsearch.client.reactive.endpoints",
+                elasticSearchUrl
+        );
+        System.setProperty(
+                "spring.elasticsearch.rest.uris",
+                elasticSearchUrl
         );
     }
 }
