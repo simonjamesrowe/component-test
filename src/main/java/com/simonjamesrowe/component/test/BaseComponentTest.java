@@ -18,7 +18,7 @@ import org.springframework.test.context.junit.jupiter.SpringJUnitConfig;
 
 import java.util.Optional;
 
-@AutoConfigureWireMock(stubs = "classpath:META-INF/**/*.json", port = 0)
+@AutoConfigureWireMock(stubs = "classpath:META-INF/mappings/*.json", port = 0)
 @ExtendWith(TestContainersExtension.class)
 @SpringJUnitConfig
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
