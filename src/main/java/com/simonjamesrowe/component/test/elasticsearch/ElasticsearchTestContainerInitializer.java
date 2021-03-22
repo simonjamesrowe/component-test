@@ -34,9 +34,14 @@ public class ElasticsearchTestContainerInitializer {
                 DockerClientFactory.instance().dockerHostIpAddress(),
                 PORT
         );
+        String reactiveElasticSearchUrl = String.format(
+                "%s:%s",
+                DockerClientFactory.instance().dockerHostIpAddress(),
+                PORT
+        );
         System.setProperty(
                 "spring.data.elasticsearch.client.reactive.endpoints",
-                elasticSearchUrl
+                reactiveElasticSearchUrl
         );
         System.setProperty(
                 "spring.elasticsearch.rest.uris",
