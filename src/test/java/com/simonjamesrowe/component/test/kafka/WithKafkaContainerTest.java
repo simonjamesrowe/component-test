@@ -1,25 +1,21 @@
 package com.simonjamesrowe.component.test.kafka;
 
 import com.simonjamesrowe.component.test.BaseComponentTest;
-import net.jodah.failsafe.Failsafe;
-import net.jodah.failsafe.RetryPolicy;
-import org.apache.kafka.clients.admin.NewTopic;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.kafka.KafkaAutoConfiguration;
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.messaging.handler.annotation.Payload;
-import org.springframework.stereotype.Service;
 import org.springframework.test.annotation.DirtiesContext;
 
-import java.time.temporal.ChronoUnit;
+import java.time.Duration;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.awaitility.Awaitility.await;
 
 @WithKafkaContainer
 @DirtiesContext(classMode = DirtiesContext.ClassMode.BEFORE_CLASS)
@@ -37,12 +33,13 @@ public class WithKafkaContainerTest extends BaseComponentTest {
   private TestKafkaListener2 testKafkaListener;
 
   @Test
-  public void testKafkaContainer() throws Exception {
-    kafkaTemplate.send("test", "key", "Hello World");
-
-    Failsafe.with(new RetryPolicy().withMaxRetries(5).withBackoff(1, 10, ChronoUnit.SECONDS))
-        .get(() -> assertThat(testKafkaListener.getData()).isEqualTo("Hello World")
-        );
+  public void testKafkaContainer() {
+    await().atMost(Duration.ofSeconds(60)).until(() -> {
+        kafkaTemplate.send("test", "key", "Hello World");
+        return  testKafkaListener.getData() != null;
+      }
+    );
+    assertThat(testKafkaListener.getData()).isEqualTo("Hello World");
   }
 }
 
