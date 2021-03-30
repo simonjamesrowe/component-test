@@ -45,14 +45,4 @@ public abstract class BaseComponentTest {
         RestAssured.baseURI = "http://localhost:" + port;
         RestAssured.defaultParser = Parser.JSON;
     }
-
-    @BeforeEach
-    public void waitForKafkaListeners() {
-        optionalKafkaListenerEndpointRegistry.ifPresent(registry -> {
-            for (MessageListenerContainer messageListenerContainer : registry.getListenerContainers()) {
-                ContainerTestUtils.waitForAssignment(messageListenerContainer,
-                    partitionCount);
-            }
-        });
-    }
 }
