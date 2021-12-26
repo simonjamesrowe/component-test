@@ -11,7 +11,7 @@ spec:
       taskSpec:
         metadata: {}
         stepTemplate:
-          image: uses:simonjamesrowe/jx3-pipeline-catalog/tasks/gradle/pullrequest.yaml@versionStream
+          image: uses:simonjamesrowe/jx3-pipeline-catalog/tasks/gradle/pullrequest.yaml
           name: ""
           resources:
             requests:
@@ -19,7 +19,7 @@ spec:
               memory: 1Gi
           workingDir: /workspace/source
         steps:
-        - image: uses:simonjamesrowe/jx3-pipeline-catalog/tasks/git-clone/git-clone-pr.yaml@versionStream
+        - image: uses:simonjamesrowe/jx3-pipeline-catalog/tasks/git-clone/git-clone-pr.yaml
           name: ""
           resources: {}
         - name: jx-variables
