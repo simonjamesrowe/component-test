@@ -30,7 +30,7 @@ spec:
             #!/bin/sh
             source .jx/variables.sh
             cp /.gradle/gradle.properties gradle.properties
-            gradle -I /.gradle/init.gradle build sonarqube publish -Pversion=$(echo VERSION) --info
+            gradle -I /.gradle/init.gradle build sonarqube publish -Pversion=$(cat VERSION) --info
   podTemplate: {}
   serviceAccountName: tekton-bot
   timeout: 12h0m0s

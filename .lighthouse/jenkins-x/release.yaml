@@ -33,7 +33,7 @@ spec:
             source .jx/variables.sh
             cp /.gradle/gradle.properties gradle.properties
             echo $VERSION
-            gradle -I /.gradle/init.gradle build sonarqube publish -Pversion=$(echo VERSION) --info
+            gradle -I /.gradle/init.gradle build sonarqube publish -Pversion=$(cat VERSION) --info
         - name: promote-changelog
           resources: {}
   podTemplate: {}
