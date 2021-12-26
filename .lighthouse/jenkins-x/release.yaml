@@ -31,8 +31,8 @@ spec:
           script: |
             #!/bin/sh
             source .jx/variables.sh
-            cp /workspace/gradle/gradle.properties gradle.properties
-            gradle -I /workspace/gradle/init.gradle build sonarqube publish -Pversion=$VERSION --info
+            cp /.gradle/gradle.properties gradle.properties
+            gradle -I /.gradle/init.gradle build sonarqube publish -Pversion=$VERSION --info
         - name: promote-changelog
           resources: {}
   podTemplate: {}
