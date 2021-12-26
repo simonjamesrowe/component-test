@@ -18,7 +18,7 @@ import org.springframework.test.context.junit.jupiter.SpringJUnitConfig;
 
 import java.util.Optional;
 
-@AutoConfigureWireMock(stubs = "classpath:META-INF/**/*.json", port = 0)
+@AutoConfigureWireMock(stubs = "classpath:META-INF/mappings/*.json", port = 0)
 @ExtendWith(TestContainersExtension.class)
 @SpringJUnitConfig
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
@@ -44,15 +44,5 @@ public abstract class BaseComponentTest {
         wireMockServer.resetRequests();
         RestAssured.baseURI = "http://localhost:" + port;
         RestAssured.defaultParser = Parser.JSON;
-    }
-
-    @BeforeEach
-    public void waitForKafkaListeners() {
-        optionalKafkaListenerEndpointRegistry.ifPresent(registry -> {
-            for (MessageListenerContainer messageListenerContainer : registry.getListenerContainers()) {
-                ContainerTestUtils.waitForAssignment(messageListenerContainer,
-                    partitionCount);
-            }
-        });
     }
 }

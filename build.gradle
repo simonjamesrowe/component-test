@@ -49,6 +49,7 @@ dependencies {
     api('org.testcontainers:kafka:1.16.2')
     api('io.rest-assured:rest-assured:3.3.0')
     api('commons-io:commons-io:2.7')
+    api('org.awaitility:awaitility:4.0.3')
 
     compileOnly('org.projectlombok:lombok')
     compileOnly('org.springframework.boot:spring-boot-starter-data-mongodb')
