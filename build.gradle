@@ -92,7 +92,6 @@ sonarqube {
         property "sonar.coverage.jacoco.xmlReportPaths", "$buildDir/reports/jacoco/test/jacocoTestReport.xml"
         property "sonar.host.url", project.property("sonar.host.url") ?: ""
         property "sonar.login", project.property("sonar.login") ?: ""
-        property "sonar.projectVersion", version
     }
 }
 
@@ -101,7 +100,6 @@ publishing {
         maven(MavenPublication) {
             from components.java
             artifact sourcesJar
-            version = version
         }
     }
 }
