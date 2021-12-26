@@ -1,6 +1,6 @@
 plugins {
-    id 'org.springframework.boot' version '2.4.1'
-    id 'io.spring.dependency-management' version '1.0.10.RELEASE'
+    id 'org.springframework.boot' version '2.6.2'
+    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
     id 'java-library'
     id 'maven-publish'
 }
@@ -17,13 +17,13 @@ repositories {
 //build a normal jar and not a spring boot jar.
 bootJar.enabled = false
 jar.enabled = true
-sourceCompatibility = '11'
+sourceCompatibility = '17'
 
 group = 'com.simonjamesrowe'
 
 
 ext {
-    set('springCloudVersion', '2020.0.0')
+    set('springCloudVersion', '2021.0.0')
 }
 
 dependencyManagement {
@@ -35,25 +35,27 @@ dependencies {
     annotationProcessor('org.projectlombok:lombok')
 
     api('org.springframework.boot:spring-boot-starter-test')
+    api('org.springframework.boot:spring-boot-starter-json')
     api('org.springframework.cloud:spring-cloud-contract-wiremock')
     api('org.springframework.cloud:spring-cloud-kubernetes-config:1.1.7.RELEASE')
     api('org.springframework.security:spring-security-oauth2-jose')
 
-    api("org.testcontainers:testcontainers:1.15.1")
-    api("org.testcontainers:elasticsearch:1.15.1")
+    api("org.testcontainers:testcontainers:1.16.2")
+    api("org.testcontainers:elasticsearch:1.16.2")
 
     api('org.apache.commons:commons-lang3:3.10')
     api('org.hibernate.validator:hibernate-validator:6.1.5.Final')
-    api('org.testcontainers:vault:1.15.1')
-    api('org.testcontainers:kafka:1.15.1')
+    api('org.testcontainers:vault:1.16.2')
+    api('org.testcontainers:kafka:1.16.2')
     api('io.rest-assured:rest-assured:3.3.0')
     api('commons-io:commons-io:2.7')
 
     compileOnly('org.projectlombok:lombok')
     compileOnly('org.springframework.boot:spring-boot-starter-data-mongodb')
+    compileOnly('org.springframework.kafka:spring-kafka')
 
     testImplementation('org.springframework.cloud:spring-cloud-starter-vault-config')
-    compile('org.springframework.kafka:spring-kafka')
+    testImplementation('org.springframework.kafka:spring-kafka')
     api("org.springframework.kafka:spring-kafka-test")
     api("net.jodah:failsafe:2.4.0")
     testImplementation('org.springframework.boot:spring-boot-starter-data-mongodb')
