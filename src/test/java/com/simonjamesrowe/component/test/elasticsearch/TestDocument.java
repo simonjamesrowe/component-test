@@ -14,7 +14,8 @@ public class TestDocument {
     @Field
     private String text;
 
-    public TestDocument() {}
+    public TestDocument() {
+    }
 
     public TestDocument(String id, String text) {
         this.id = id;

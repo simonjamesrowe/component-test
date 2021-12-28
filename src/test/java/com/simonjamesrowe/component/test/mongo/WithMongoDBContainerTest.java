@@ -1,6 +1,5 @@
 package com.simonjamesrowe.component.test.mongo;
 
-import com.simonjamesrowe.component.test.TestContainersExtension;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -12,9 +11,8 @@ import java.util.Arrays;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-@ExtendWith(TestContainersExtension.class)
-@DataMongoTest(properties = "spring.autoconfigure.exclude=")
 @WithMongoDBContainer
+@DataMongoTest(properties = "spring.autoconfigure.exclude=")
 @DirtiesContext(classMode = DirtiesContext.ClassMode.BEFORE_CLASS)
 public class WithMongoDBContainerTest {
 

@@ -1,7 +1,5 @@
 package com.simonjamesrowe.component.test.jwt;
 
-import org.apache.commons.io.IOUtils;
-import org.springframework.core.io.ClassPathResource;
 import com.nimbusds.jose.JOSEObjectType;
 import com.nimbusds.jose.JWSAlgorithm;
 import com.nimbusds.jose.JWSHeader;
@@ -11,6 +9,8 @@ import com.nimbusds.jose.crypto.RSASSASigner;
 import com.nimbusds.jose.jwk.RSAKey;
 import com.nimbusds.jwt.JWTClaimsSet;
 import com.nimbusds.jwt.SignedJWT;
+import org.apache.commons.io.IOUtils;
+import org.springframework.core.io.ClassPathResource;
 import org.springframework.util.CollectionUtils;
 
 import java.nio.charset.StandardCharsets;
@@ -50,7 +50,7 @@ public abstract class JwtUtils {
     }
 
     protected static JWTClaimsSet claims(String userId, String name, String email, String username, List<String> roles) {
-        JWTClaimsSet.Builder builder =  new JWTClaimsSet.Builder()
+        JWTClaimsSet.Builder builder = new JWTClaimsSet.Builder()
                 .claim("sub", userId)
                 .claim("email", email)
                 .claim("name", name)

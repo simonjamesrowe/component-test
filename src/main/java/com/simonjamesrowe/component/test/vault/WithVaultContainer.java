@@ -1,14 +1,8 @@
 package com.simonjamesrowe.component.test.vault;
 
-import java.lang.annotation.Documented;
-import java.lang.annotation.ElementType;
-import java.lang.annotation.Inherited;
-import java.lang.annotation.Retention;
-import java.lang.annotation.RetentionPolicy;
-import java.lang.annotation.Target;
+import org.junit.jupiter.api.extension.ExtendWith;
 
-import com.simonjamesrowe.component.test.TestContainer;
-import org.springframework.test.context.ActiveProfiles;
+import java.lang.annotation.*;
 
 /**
  * Sets up a kafka container
@@ -17,11 +11,7 @@ import org.springframework.test.context.ActiveProfiles;
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
 @Inherited
-@TestContainer(initializers = VaultTestContainersInitializer.class)
-@ActiveProfiles("vault-component-test")
+@ExtendWith(VaultTestContainersExtension.class)
 public @interface WithVaultContainer {
 
-    String secretPath() default "{}";
-
-    String[] secretValues() default {};
 }

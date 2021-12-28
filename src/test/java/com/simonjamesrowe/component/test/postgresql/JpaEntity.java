@@ -10,7 +10,8 @@ import java.util.Objects;
 @Table(name = "test_entity")
 public class JpaEntity implements Serializable {
 
-    JpaEntity() {}
+    JpaEntity() {
+    }
 
     public JpaEntity(String id, String fieldOne, String fieldTwo) {
         this.id = id;

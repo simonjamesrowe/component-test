@@ -1,7 +1,5 @@
 package com.simonjamesrowe.component.test.mongo;
 
-import java.io.File;
-
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ArrayNode;
@@ -12,9 +10,11 @@ import org.springframework.core.io.ClassPathResource;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.query.Query;
 
+import java.io.File;
+
 public abstract class TestDataRunner implements CommandLineRunner {
-    
-    private String mongoCollection;
+
+    private final String mongoCollection;
 
     public TestDataRunner(String mongoCollection) {
         this.mongoCollection = mongoCollection;
@@ -23,17 +23,18 @@ public abstract class TestDataRunner implements CommandLineRunner {
     @Autowired
     private MongoTemplate mongoTemplate;
 
-    @Override public void run(String... args) throws Exception {
+    @Override
+    public void run(String... args) throws Exception {
         mongoTemplate.remove(new Query(), mongoCollection);
-        File testDataFile =  new ClassPathResource(mongoCollection + ".json").getFile();
+        File testDataFile = new ClassPathResource(mongoCollection + ".json").getFile();
         ArrayNode jsonArray = (ArrayNode) new ObjectMapper().readTree(testDataFile);
-        for (int i =0; i < jsonArray.size();i++) {
+        for (int i = 0; i < jsonArray.size(); i++) {
             JsonNode jsonObject = jsonArray.get(i);
             Document document = Document.parse(jsonObject.toString());
             mongoTemplate.insert(document, mongoCollection);
         }
 
     }
-    
-    
+
+
 }

@@ -1,7 +1,6 @@
 package com.simonjamesrowe.component.test.redis;
 
-import com.simonjamesrowe.component.test.TestContainer;
-import org.springframework.test.context.ActiveProfiles;
+import org.junit.jupiter.api.extension.ExtendWith;
 
 import java.lang.annotation.*;
 
@@ -12,7 +11,7 @@ import java.lang.annotation.*;
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
 @Inherited
-@TestContainer(initializers = RedisTestContainersInitializer.class)
+@ExtendWith(RedisTestContainersExtension.class)
 public @interface WithRedisContainer {
 
 }

@@ -8,7 +8,8 @@ import java.util.Objects;
 @Document("mongoDocument")
 public class MongoDocument {
 
-    public MongoDocument() { }
+    public MongoDocument() {
+    }
 
     public MongoDocument(String fieldOne, Integer fieldTwo, Boolean fieldThree) {
         this.fieldOne = fieldOne;

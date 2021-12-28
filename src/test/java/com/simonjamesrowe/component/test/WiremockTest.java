@@ -21,7 +21,7 @@ public class WiremockTest extends BaseComponentTest {
     @Test
     public void testCanAccessWiremockServer() {
         RestTemplate restTemplate = new RestTemplate();
-        Map<String,String> helloWorld = restTemplate.getForObject(testEndpoint, Map.class);
+        Map<String, String> helloWorld = restTemplate.getForObject(testEndpoint, Map.class);
         assertThat(helloWorld).containsEntry("hello", "world");
         assertThat(wiremockPort).isNotEqualTo(8080);
     }

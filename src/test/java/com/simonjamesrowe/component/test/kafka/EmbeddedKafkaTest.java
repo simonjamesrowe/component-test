@@ -31,9 +31,9 @@ public class EmbeddedKafkaTest extends BaseComponentTest {
     @Test
     public void testKafkaContainer() {
         await().atMost(Duration.ofSeconds(60)).until(() -> {
-                kafkaTemplate.send("test", "key", "Hello World");
-                return testKafkaListener.getData() != null;
-            }
+                    kafkaTemplate.send("test", "key", "Hello World");
+                    return testKafkaListener.getData() != null;
+                }
         );
         assertThat(testKafkaListener.getData()).isEqualTo("Hello World");
     }

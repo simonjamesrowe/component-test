@@ -1,25 +1,20 @@
 package com.simonjamesrowe.component.test.vault;
 
-import static org.assertj.core.api.Java6Assertions.assertThat;
-
-import com.simonjamesrowe.component.test.BaseComponentTest;
+import com.simonjamesrowe.component.test.ComponentTest;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.cloud.vault.config.VaultConfigTemplate;
-import org.springframework.core.env.Environment;
 import org.springframework.test.annotation.DirtiesContext;
-import org.springframework.test.context.ActiveProfiles;
-import org.springframework.test.context.TestPropertySource;
-import org.springframework.vault.annotation.VaultPropertySource;
-import org.springframework.vault.core.VaultKeyValueOperations;
 import org.springframework.vault.core.VaultTemplate;
 
 import java.util.Map;
 
+import static org.assertj.core.api.Java6Assertions.assertThat;
+
+@WithVaultContainer
+@ComponentTest
 @DirtiesContext(classMode = DirtiesContext.ClassMode.BEFORE_CLASS)
-@WithVaultContainer(secretPath = "secret/component-test", secretValues = {"val1=Secret1", "val2=Secret2", "val3=Secret3", "nested.val=NestedVal"})
-public class WithVaultContainerTest extends BaseComponentTest {
+public class WithVaultContainerTest {
 
     @Value("${spring.cloud.vault.host}")
     private String vaultHost;
@@ -34,6 +29,12 @@ public class WithVaultContainerTest extends BaseComponentTest {
     public void contextLoadedAndPropertiesSet() {
         assertThat(vaultHost).isNotNull();
         assertThat(vaultPort).isNotNull();
+        vaultTemplate.write("secret/data/component-test", Map.of("data", Map.of(
+                "val1", "Secret1",
+                "val2", "Secret2",
+                "val3", "Secret3",
+                "nested.val", "NestedVal"
+        )));
         var result = (Map<String, Object>) vaultTemplate.read("secret/data/component-test").getData().get("data");
         assertThat(result.get("val1")).isEqualTo("Secret1");
         assertThat(result.get("val2")).isEqualTo("Secret2");

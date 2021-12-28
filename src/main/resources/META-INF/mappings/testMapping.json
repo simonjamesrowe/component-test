@@ -5,8 +5,8 @@
   },
   "response": {
     "status": 200,
-    "jsonBody":  {
-      "hello" : "world"
+    "jsonBody": {
+      "hello": "world"
     },
     "headers": {
       "Content-Type": "application/json"

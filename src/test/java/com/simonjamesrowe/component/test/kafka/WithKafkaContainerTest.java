@@ -22,41 +22,41 @@ import static org.awaitility.Awaitility.await;
 @Import({TestKafkaListener2.class, KafkaAutoConfiguration.class})
 public class WithKafkaContainerTest extends BaseComponentTest {
 
-  public WithKafkaContainerTest() {
-    partitionCount = 1;
-  }
+    public WithKafkaContainerTest() {
+        partitionCount = 1;
+    }
 
-  @Autowired
-  private KafkaTemplate kafkaTemplate;
+    @Autowired
+    private KafkaTemplate kafkaTemplate;
 
-  @Autowired
-  private TestKafkaListener2 testKafkaListener;
+    @Autowired
+    private TestKafkaListener2 testKafkaListener;
 
-  @Test
-  public void testKafkaContainer() {
-    await().atMost(Duration.ofSeconds(60)).until(() -> {
-        kafkaTemplate.send("test", "key", "Hello World");
-        return  testKafkaListener.getData() != null;
-      }
-    );
-    assertThat(testKafkaListener.getData()).isEqualTo("Hello World");
-  }
+    @Test
+    public void testKafkaContainer() {
+        await().atMost(Duration.ofSeconds(60)).until(() -> {
+                    kafkaTemplate.send("test", "key", "Hello World");
+                    return testKafkaListener.getData() != null;
+                }
+        );
+        assertThat(testKafkaListener.getData()).isEqualTo("Hello World");
+    }
 }
 
 @Configuration
 @Lazy
 class TestKafkaListener2 {
 
-  private String data;
+    private String data;
 
-  public String getData() {
-    return data;
-  }
+    public String getData() {
+        return data;
+    }
 
-  @KafkaListener(topics = "test", groupId = "test2")
-  public void listen(@Payload String messagePayload) {
-    data = messagePayload;
-  }
+    @KafkaListener(topics = "test", groupId = "test2")
+    public void listen(@Payload String messagePayload) {
+        data = messagePayload;
+    }
 
 }
 

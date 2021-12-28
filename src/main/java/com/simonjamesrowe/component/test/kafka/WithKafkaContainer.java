@@ -1,6 +1,6 @@
 package com.simonjamesrowe.component.test.kafka;
 
-import com.simonjamesrowe.component.test.TestContainer;
+import org.junit.jupiter.api.extension.ExtendWith;
 
 import java.lang.annotation.*;
 
@@ -11,7 +11,7 @@ import java.lang.annotation.*;
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
 @Inherited
-@TestContainer(initializers = KafkaTestContainerInitializer.class)
+@ExtendWith(KafkaTestContainerExtension.class)
 public @interface WithKafkaContainer {
 
 }

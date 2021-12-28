@@ -1,7 +1,6 @@
 package com.simonjamesrowe.component.test.postgresql;
 
-import com.simonjamesrowe.component.test.TestContainer;
-import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
+import org.junit.jupiter.api.extension.ExtendWith;
 
 import java.lang.annotation.*;
 
@@ -12,11 +11,8 @@ import java.lang.annotation.*;
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
 @Inherited
-@TestContainer(initializers = PostgresqlTestContainersInitializer.class)
-@AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
+@ExtendWith(PostgresqlTestContainersExtension.class)
 public @interface WithPostgresContainer {
 
-    int poolSize() default 2;
 
-    String[] command() default {"postgres", "-c", "max_connections=500", "-c", "shared_buffers=256MB"};
 }
