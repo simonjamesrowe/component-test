@@ -1,6 +1,7 @@
 package com.simonjamesrowe.component.test.elasticsearch;
 
 import org.junit.jupiter.api.extension.ExtendWith;
+import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 import java.lang.annotation.*;
 
@@ -11,7 +12,7 @@ import java.lang.annotation.*;
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
 @Inherited
-@ExtendWith(ElasticsearchTestContainerExtension.class)
+@ExtendWith({ElasticsearchTestContainerExtension.class, SpringExtension.class})
 public @interface WithElasticsearchContainer {
 
 }
