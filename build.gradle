@@ -39,7 +39,6 @@ dependencies {
     api('org.springframework.boot:spring-boot-starter-test')
     api('org.springframework.boot:spring-boot-starter-json')
     api('org.springframework.cloud:spring-cloud-contract-wiremock')
-    api('org.springframework.cloud:spring-cloud-kubernetes-config:1.1.7.RELEASE')
     api('org.springframework.security:spring-security-oauth2-jose')
 
     api("org.testcontainers:testcontainers:1.16.2")
