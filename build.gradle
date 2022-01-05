@@ -19,7 +19,7 @@ repositories {
 //build a normal jar and not a spring boot jar.
 bootJar.enabled = false
 jar.enabled = true
-sourceCompatibility = '17'
+sourceCompatibility = '16'
 
 group = 'com.simonjamesrowe'
 
