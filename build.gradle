@@ -25,7 +25,7 @@ group = 'com.simonjamesrowe'
 
 
 ext {
-    set('springCloudVersion', '2021.0.0')
+    set('springCloudVersion', '2020.0.5')
 }
 
 dependencyManagement {
