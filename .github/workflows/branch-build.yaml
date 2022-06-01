@@ -17,11 +17,6 @@ jobs:
         uses: gradle/gradle-build-action@v2
       - name: Gradle Build
         run: ./gradlew build
-      - name: Bump version and push tag
-        id: tag_version
-        uses: mathieudutour/github-tag-action@v6.0
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
       - name: Upload build reports
         uses: actions/upload-artifact@v3
         with:
