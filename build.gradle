@@ -14,6 +14,14 @@ apply plugin: 'io.spring.dependency-management'
 repositories {
     mavenCentral()
     maven { url 'https://repo.spring.io/milestone' }
+    maven {
+        name = "GitHubPackages"
+        url = "https://maven.pkg.github.com/simonjamesrowe/component-test"
+        credentials {
+            username = System.getenv("GITHUB_ACTOR")
+            password = System.getenv("GITHUB_TOKEN")
+        }
+    }
 }
 
 //build a normal jar and not a spring boot jar.
