@@ -16,6 +16,19 @@ repositories {
     maven { url 'https://repo.spring.io/milestone' }
 }
 
+publishing {
+    repositories {
+        maven {
+            name = "GitHubPackages"
+            url = "https://maven.pkg.github.com/simonjamesrowe/component-test"
+            credentials {
+                username = System.getenv("GITHUB_ACTOR")
+                password = System.getenv("GITHUB_TOKEN")
+            }
+        }
+    }
+}
+
 //build a normal jar and not a spring boot jar.
 bootJar.enabled = false
 jar.enabled = true
@@ -71,6 +84,9 @@ dependencies {
 
 test {
     useJUnitPlatform()
+    testLogging {
+        events 'PASSED', 'FAILED', 'SKIPPED'
+    }
 }
 
 task sourcesJar(type: Jar, dependsOn: classes) {
