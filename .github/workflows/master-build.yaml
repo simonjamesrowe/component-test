@@ -5,7 +5,8 @@ on:
       - master
       - main
 jobs:
-  gradle:
+  build-and-deploy:
+    name: Gradle Build and Deploy
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
