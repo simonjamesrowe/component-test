@@ -1,5 +1,5 @@
 plugins {
-    id 'org.springframework.boot' version '2.5.8'
+    id 'org.springframework.boot' version '2.7.1'
     id 'io.spring.dependency-management' version '1.0.11.RELEASE'
     id 'java-library'
     id 'maven-publish'
@@ -32,13 +32,13 @@ publishing {
 //build a normal jar and not a spring boot jar.
 bootJar.enabled = false
 jar.enabled = true
-sourceCompatibility = '11'
+sourceCompatibility = '17'
 
 group = 'com.simonjamesrowe'
 
 
 ext {
-    set('springCloudVersion', '2020.0.5')
+    set('springCloudVersion', '2021.0.3')
 }
 
 dependencyManagement {
@@ -54,13 +54,13 @@ dependencies {
     api('org.springframework.cloud:spring-cloud-contract-wiremock')
     api('org.springframework.security:spring-security-oauth2-jose')
 
-    api("org.testcontainers:testcontainers:1.16.2")
-    api("org.testcontainers:elasticsearch:1.16.2")
+    api("org.testcontainers:testcontainers:1.17.2")
+    api("org.testcontainers:elasticsearch:1.17.2")
 
     api('org.apache.commons:commons-lang3:3.10')
     api('org.hibernate.validator:hibernate-validator:6.1.5.Final')
-    api('org.testcontainers:vault:1.16.2')
-    api('org.testcontainers:kafka:1.16.2')
+    api('org.testcontainers:vault:1.17.2')
+    api('org.testcontainers:kafka:1.17.2')
     api('io.rest-assured:rest-assured:3.3.0')
     api('commons-io:commons-io:2.7')
     api('org.awaitility:awaitility:4.0.3')
