@@ -41,6 +41,21 @@ ext {
     set('springCloudVersion', '2021.0.3')
 }
 
+repositories {
+    gradlePluginPortal()
+    mavenCentral()
+    maven {
+        url = "https://nexus.shared.global.com"
+    }
+    maven {
+        url = 'https://packages.confluent.io/maven/'
+    }
+    maven {
+        url = 'https://jitpack.io'
+    }
+
+}
+
 dependencyManagement {
     imports { mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}" }
 }
@@ -64,6 +79,15 @@ dependencies {
     api('io.rest-assured:rest-assured:3.3.0')
     api('commons-io:commons-io:2.7')
     api('org.awaitility:awaitility:4.0.3')
+
+    api ('io.github.embeddedkafka:embedded-kafka-schema-registry_2.13:7.0.1') {
+        exclude group: 'org.slf4j', module: 'slf4j-log4j12'
+    }
+
+    compileOnly 'org.projectlombok:lombok:1.18.22'
+    annotationProcessor 'org.projectlombok:lombok:1.18.22'
+    testCompileOnly 'org.projectlombok:lombok:1.18.22'
+    testAnnotationProcessor 'org.projectlombok:lombok:1.18.22'
 
     compileOnly('org.projectlombok:lombok')
     compileOnly('org.springframework.boot:spring-boot-starter-data-mongodb')
