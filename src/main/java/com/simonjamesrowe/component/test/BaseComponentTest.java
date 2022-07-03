@@ -3,13 +3,12 @@ package com.simonjamesrowe.component.test;
 import com.github.tomakehurst.wiremock.WireMockServer;
 import io.restassured.RestAssured;
 import io.restassured.parsing.Parser;
+import java.util.Optional;
 import org.junit.jupiter.api.BeforeEach;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.web.server.LocalServerPort;
+import org.springframework.boot.test.web.server.LocalServerPort;
 import org.springframework.core.env.Environment;
 import org.springframework.kafka.config.KafkaListenerEndpointRegistry;
-
-import java.util.Optional;
 
 @ComponentTest
 public abstract class BaseComponentTest {
